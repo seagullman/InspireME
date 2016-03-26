@@ -13,7 +13,6 @@
 		C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */; };
 		C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */; };
 		C7EE7DED1CA5AEBA00BCCFDE /* InspireMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */; };
-		C7EE7DF81CA5AEF700BCCFDE /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DF71CA5AEF700BCCFDE /* GlobalNavigationController.swift */; };
 		C7EE7DFA1CA5AF4900BCCFDE /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */; };
 		C7EE7DFC1CA5B32D00BCCFDE /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFB1CA5B32D00BCCFDE /* DashboardController.swift */; };
 		C7EE7DFE1CA5B36B00BCCFDE /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFD1CA5B36B00BCCFDE /* DashboardViewModel.swift */; };
@@ -42,7 +41,6 @@
 		C7EE7DE81CA5AEBA00BCCFDE /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireMETests.swift; sourceTree = "<group>"; };
 		C7EE7DEE1CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EE7DF71CA5AEF700BCCFDE /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
 		C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
 		C7EE7DFB1CA5B32D00BCCFDE /* DashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		C7EE7DFD1CA5B36B00BCCFDE /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
 				C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */,
 				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
-				C7EE7DF71CA5AEF700BCCFDE /* GlobalNavigationController.swift */,
 				C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */,
 				C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */,
 			);
@@ -229,7 +226,6 @@
 				C7EE7DFC1CA5B32D00BCCFDE /* DashboardController.swift in Sources */,
 				C7EE7DFE1CA5B36B00BCCFDE /* DashboardViewModel.swift in Sources */,
 				C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */,
-				C7EE7DF81CA5AEF700BCCFDE /* GlobalNavigationController.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +418,7 @@
 				C7EE7DF31CA5AEBA00BCCFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7EE7DF41CA5AEBA00BCCFDE /* Build configuration list for PBXNativeTarget "InspireMETests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +427,7 @@
 				C7EE7DF61CA5AEBA00BCCFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
