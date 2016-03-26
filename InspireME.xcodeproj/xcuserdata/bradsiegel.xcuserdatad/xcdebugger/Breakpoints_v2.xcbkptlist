@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InspireME/GlobalNavigationController.swift"
-            timestampString = "480631239.009431"
+            timestampString = "480664912.839069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -40,11 +40,139 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InspireME/GlobalNavigationController.swift"
-            timestampString = "480631242.340169"
+            timestampString = "480664912.839069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InspireME/GlobalContentViewController.swift"
+            timestampString = "480664392.04546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InspireME/DashboardController.swift"
+            timestampString = "480664464.620216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "setSeguePerformer(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InspireME/GlobalContentViewController.swift"
+            timestampString = "480665016.055164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "navigateWithSegue(_:dataForSegue:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InspireME.GlobalContentViewController.navigateWithSegue (Swift.String, dataForSegue : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ()"
+                  moduleName = "InspireME"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bradsiegel/Desktop/InspireME/InspireME/GlobalContentViewController.swift"
+                  timestampString = "480665206.051194"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InspireME.GlobalContentViewController.(navigateWithSegue (Swift.String, dataForSegue : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "InspireME"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bradsiegel/Desktop/InspireME/InspireME/GlobalContentViewController.swift"
+                  timestampString = "480665206.051378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InspireME/GlobalContentViewController.swift"
+            timestampString = "480665018.949943"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "navigationController(_:willShowViewController:animated:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InspireME.GlobalContentViewController.navigationController (__ObjC.UINavigationController, willShowViewController : __ObjC.UIViewController, animated : Swift.Bool) -&gt; ()"
+                  moduleName = "InspireME"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bradsiegel/Desktop/InspireME/InspireME/GlobalContentViewController.swift"
+                  timestampString = "480665206.053231"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InspireME.GlobalContentViewController.navigationController (__ObjC.UINavigationController, willShowViewController : __ObjC.UIViewController, animated : Swift.Bool) -&gt; ()"
+                  moduleName = "InspireME"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bradsiegel/Desktop/InspireME/InspireME/GlobalContentViewController.swift"
+                  timestampString = "480665206.053487"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

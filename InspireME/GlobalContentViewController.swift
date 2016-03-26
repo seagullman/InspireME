@@ -25,14 +25,25 @@ class GlobalContentViewController: UIViewController,
                                    SeguePerformer {
 
 
+    private weak var embeddedNavigationController : GlobalNavigationController?
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "MainContentEmbed",
+            let destination = segue.destinationViewController as? GlobalNavigationController {
+            
+            self.embeddedNavigationController = destination
+            
+            destination.navigationDelegate = self
+            
+//            if let rootSegue = delegate?.startSegue() {
+//                navigateWithSegue(rootSegue)
+//            }
+        }
 
         
     }
     
     func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-        print("willShowController")
         if let destination = viewController as? RequiresSeguePerformer {
             destination.setSeguePerformer(self)
         }

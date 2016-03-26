@@ -20,7 +20,7 @@ class DashboardController: UIViewController,
     }
     
     @IBAction private func login() {
-        seguePerformer?.navigateWithSegue("dashboardSegue", dataForSegue: nil)
+        seguePerformer?.navigateWithSegue("landingSeg", dataForSegue: nil)
     }
     
     //MARK:- RequiresViewModel
