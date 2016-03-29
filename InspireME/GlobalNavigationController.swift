@@ -20,20 +20,25 @@ class GlobalNavigationController: UINavigationController,
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let destination = segue.destinationViewController as? RequiresViewModel {
-//            if let viewModel = sender as? ViewModel, identifier = segue.identifier {
-//                destination.setViewModel(viewModel)
-//            }
-//        }
-    }
-    
-    func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
-        self.navigationDelegate?.navigationController?(navigationController, didShowViewController: viewController, animated: animated)
+        //MARK: - Only necessary to do things here if GlobalContentController
+        //needs something upon it's creation
     }
     
     func navigationController(navigationController: UINavigationController,
-                              willShowViewController viewController: UIViewController, animated: Bool) {
-        self.navigationDelegate?.navigationController?(navigationController, willShowViewController: viewController, animated: animated)
+                              didShowViewController viewController: UIViewController,
+                              animated: Bool) {
+        self.navigationDelegate?.navigationController?(
+            navigationController,
+            didShowViewController: viewController,
+            animated: animated)
     }
-
+    
+    func navigationController(navigationController: UINavigationController,
+                              willShowViewController viewController: UIViewController,
+                              animated: Bool) {
+        self.navigationDelegate?.navigationController?(
+            navigationController,
+            willShowViewController: viewController,
+            animated: animated)
+    }
 }

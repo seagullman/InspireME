@@ -15,10 +15,6 @@ class DashboardController: UIViewController,
     private var viewModel : DashboardViewModel?
     private var seguePerformer: SeguePerformer?
     
-    override func awakeFromNib() {
-        print("DashboardController")
-    }
-    
     @IBAction private func login() {
         seguePerformer?.navigateWithSegue("landingSeg", dataForSegue: nil)
     }

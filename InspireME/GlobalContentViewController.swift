@@ -30,17 +30,9 @@ class GlobalContentViewController: UIViewController,
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "MainContentEmbed",
             let destination = segue.destinationViewController as? GlobalNavigationController {
-            
             self.embeddedNavigationController = destination
-            
             destination.navigationDelegate = self
-            
-//            if let rootSegue = delegate?.startSegue() {
-//                navigateWithSegue(rootSegue)
-//            }
         }
-
-        
     }
     
     func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
@@ -51,8 +43,11 @@ class GlobalContentViewController: UIViewController,
     
     func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?) {
         dispatch_async(dispatch_get_main_queue(),{
-            self.performSegueWithIdentifier(segueToPerform, sender: dataForSegue)
+            if let embeddedNavigationController = self.embeddedNavigationController {
+                embeddedNavigationController.performSegueWithIdentifier(
+                    segueToPerform,
+                    sender: nil)
+            }
         })
     }
-    
 }
