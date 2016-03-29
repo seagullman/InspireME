@@ -1,5 +1,5 @@
 //
-//  DashboardController.swift
+//  LoginController.swift
 //  InspireME
 //
 //  Created by Brad Siegel on 3/25/16.
@@ -8,22 +8,13 @@
 
 import UIKit
 
-class DashboardController: UIViewController,
-                           RequiresViewModel,
-                           RequiresSeguePerformer {
+class LoginController: UIViewController,
+                       RequiresSeguePerformer {
     
-    private var viewModel : DashboardViewModel?
     private var seguePerformer: SeguePerformer?
     
     @IBAction private func login() {
         seguePerformer?.navigateWithSegue("landingSeg", dataForSegue: nil)
-    }
-    
-    //MARK:- RequiresViewModel
-    func setViewModel(viewModel: ViewModel) {
-        if let viewModel = viewModel as? DashboardViewModel {
-            self.viewModel = viewModel
-        }
     }
     
     //MARK:- RequiresSeguePerformer

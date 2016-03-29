@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
+		C7BEC6901CAA2D3B00A3FE82 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */; };
 		C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */; };
 		C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */; };
 		C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */; };
 		C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */; };
 		C7EE7DED1CA5AEBA00BCCFDE /* InspireMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */; };
 		C7EE7DFA1CA5AF4900BCCFDE /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */; };
-		C7EE7DFC1CA5B32D00BCCFDE /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFB1CA5B32D00BCCFDE /* DashboardController.swift */; };
-		C7EE7DFE1CA5B36B00BCCFDE /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFD1CA5B36B00BCCFDE /* DashboardViewModel.swift */; };
-		C7EE7E001CA5B6F700BCCFDE /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFF1CA5B6F700BCCFDE /* DashboardView.swift */; };
+		C7EE7DFC1CA5B32D00BCCFDE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFB1CA5B32D00BCCFDE /* LoginController.swift */; };
+		C7EE7E001CA5B6F700BCCFDE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFF1CA5B6F700BCCFDE /* LoginView.swift */; };
 		C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
+		C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		C7EE7DD41CA5AEBA00BCCFDE /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EE7DDC1CA5AEBA00BCCFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,9 +43,8 @@
 		C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireMETests.swift; sourceTree = "<group>"; };
 		C7EE7DEE1CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
-		C7EE7DFB1CA5B32D00BCCFDE /* DashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
-		C7EE7DFD1CA5B36B00BCCFDE /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		C7EE7DFF1CA5B6F700BCCFDE /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		C7EE7DFB1CA5B32D00BCCFDE /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C7EE7DFF1CA5B6F700BCCFDE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7BEC68E1CAA2D2800A3FE82 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
 		C7EE7DCB1CA5AEBA00BCCFDE = {
 			isa = PBXGroup;
 			children = (
@@ -87,13 +95,14 @@
 		C7EE7DD61CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXGroup;
 			children = (
-				C7EE7E011CA5C04800BCCFDE /* Dashboard */,
-				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
+				C7BEC68E1CAA2D2800A3FE82 /* Dashboard */,
+				C7EE7E011CA5C04800BCCFDE /* Login */,
 				C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */,
 				C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */,
 				C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */,
 				C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */,
 				C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */,
+				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
 				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
 			);
@@ -109,14 +118,13 @@
 			path = InspireMETests;
 			sourceTree = "<group>";
 		};
-		C7EE7E011CA5C04800BCCFDE /* Dashboard */ = {
+		C7EE7E011CA5C04800BCCFDE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C7EE7DFB1CA5B32D00BCCFDE /* DashboardController.swift */,
-				C7EE7DFD1CA5B36B00BCCFDE /* DashboardViewModel.swift */,
-				C7EE7DFF1CA5B6F700BCCFDE /* DashboardView.swift */,
+				C7EE7DFB1CA5B32D00BCCFDE /* LoginController.swift */,
+				C7EE7DFF1CA5B6F700BCCFDE /* LoginView.swift */,
 			);
-			name = Dashboard;
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +230,10 @@
 			files = (
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
 				C7EE7DFA1CA5AF4900BCCFDE /* ViewModelProtocols.swift in Sources */,
-				C7EE7E001CA5B6F700BCCFDE /* DashboardView.swift in Sources */,
-				C7EE7DFC1CA5B32D00BCCFDE /* DashboardController.swift in Sources */,
-				C7EE7DFE1CA5B36B00BCCFDE /* DashboardViewModel.swift in Sources */,
+				C7EE7E001CA5B6F700BCCFDE /* LoginView.swift in Sources */,
+				C7EE7DFC1CA5B32D00BCCFDE /* LoginController.swift in Sources */,
 				C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */,
+				C7BEC6901CAA2D3B00A3FE82 /* DashboardController.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  DashboardView.swift
+//  LoginView.swift
 //  InspireME
 //
 //  Created by Brad Siegel on 3/25/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DashboardView: UIView {
+class LoginView: UIView {
     
     @IBOutlet private weak var usernameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!

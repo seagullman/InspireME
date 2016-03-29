@@ -8,24 +8,24 @@
 
 import UIKit
 
-protocol RequiresViewModel {
-    func setViewModel(viewModel: ViewModel)
-}
-
-protocol SeguePerformer : class {
+protocol SeguePerformer: class {
     func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?)
 }
 
-protocol RequiresSeguePerformer : class {
+protocol RequiresSeguePerformer: class {
     func setSeguePerformer(performer: SeguePerformer)
+}
+
+protocol ProvidesCustomTitleView : class {
+    func provideTitleView(frame: CGRect) -> UIView
 }
 
 class GlobalContentViewController: UIViewController,
                                    UINavigationControllerDelegate,
                                    SeguePerformer {
 
-
     private weak var embeddedNavigationController : GlobalNavigationController?
+    @IBOutlet private var navigationBarView: UIView!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "MainContentEmbed",
@@ -39,6 +39,12 @@ class GlobalContentViewController: UIViewController,
         if let destination = viewController as? RequiresSeguePerformer {
             destination.setSeguePerformer(self)
         }
+        
+        if let destination = viewController as? ProvidesCustomTitleView {
+            clearAllViewsFromContainer()
+            let titleView = destination.provideTitleView(self.navigationBarView.frame)
+            self.navigationBarView.addSubview(titleView)
+        }
     }
     
     func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?) {
@@ -49,5 +55,9 @@ class GlobalContentViewController: UIViewController,
                     sender: nil)
             }
         })
+    }
+    
+    private func clearAllViewsFromContainer() {
+        self.navigationBarView.subviews.forEach({ $0.removeFromSuperview()})
     }
 }
