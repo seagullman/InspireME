@@ -39,12 +39,6 @@ class GlobalContentViewController: UIViewController,
         if let destination = viewController as? RequiresSeguePerformer {
             destination.setSeguePerformer(self)
         }
-        
-        if let destination = viewController as? ProvidesCustomTitleView {
-            clearAllViewsFromContainer()
-            let titleView = destination.provideTitleView(self.navigationBarView.frame)
-            self.navigationBarView.addSubview(titleView)
-        }
     }
     
     func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?) {
@@ -55,9 +49,5 @@ class GlobalContentViewController: UIViewController,
                     sender: nil)
             }
         })
-    }
-    
-    private func clearAllViewsFromContainer() {
-        self.navigationBarView.subviews.forEach({ $0.removeFromSuperview()})
     }
 }

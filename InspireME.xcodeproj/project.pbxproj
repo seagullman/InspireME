@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C73D3E0F1CAB6DF300C7C36B /* DashboardNavigationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73D3E0E1CAB6DF300C7C36B /* DashboardNavigationHeader.xib */; };
+		C73D3E111CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */; };
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
 		C7BEC6901CAA2D3B00A3FE82 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */; };
 		C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C73D3E0E1CAB6DF300C7C36B /* DashboardNavigationHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardNavigationHeader.xib; sourceTree = "<group>"; };
+		C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardNavigationHeaderView.swift; sourceTree = "<group>"; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
 		C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		C7EE7DD41CA5AEBA00BCCFDE /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
 				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
+				C73D3E0E1CAB6DF300C7C36B /* DashboardNavigationHeader.xib */,
+				C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */,
 			);
 			path = InspireME;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */,
 				C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */,
 				C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */,
+				C73D3E0F1CAB6DF300C7C36B /* DashboardNavigationHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 			files = (
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
 				C7EE7DFA1CA5AF4900BCCFDE /* ViewModelProtocols.swift in Sources */,
+				C73D3E111CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift in Sources */,
 				C7EE7E001CA5B6F700BCCFDE /* LoginView.swift in Sources */,
 				C7EE7DFC1CA5B32D00BCCFDE /* LoginController.swift in Sources */,
 				C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */,

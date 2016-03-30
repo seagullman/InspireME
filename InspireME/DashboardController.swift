@@ -13,8 +13,6 @@ class DashboardController: UIViewController,
 
     //MARK: - ProvidesCustomTitleView
     func provideTitleView(frame: CGRect) -> UIView {
-        let view = UIView(frame: frame)
-        view.backgroundColor = UIColor.redColor()
-        return view
+        return DashboardNavigationHeaderView.fromNib(frame)
     }
 }
