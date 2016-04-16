@@ -7,22 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C73D3E0F1CAB6DF300C7C36B /* DashboardNavigationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73D3E0E1CAB6DF300C7C36B /* DashboardNavigationHeader.xib */; };
+		A9436F3F31A4E27A1B4A3ABF /* Pods_InspireME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35DF7B6A93E22AFC671AC57 /* Pods_InspireME.framework */; };
 		C73D3E111CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */; };
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
-		C7BEC6901CAA2D3B00A3FE82 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */; };
+		C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */; };
+		C79278CC1CBF01D300B50FA8 /* InspirationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */; };
+		C79278D41CBF053700B50FA8 /* InspirationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D31CBF053700B50FA8 /* InspirationCollectionViewCell.swift */; };
+		C79278D71CBF061100B50FA8 /* InspirationCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D61CBF061100B50FA8 /* InspirationCardViewModel.swift */; };
+		C79278DA1CBF065600B50FA8 /* InspirationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D91CBF065600B50FA8 /* InspirationCard.swift */; };
 		C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */; };
 		C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */; };
 		C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */; };
 		C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */; };
 		C7EE7DED1CA5AEBA00BCCFDE /* InspireMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */; };
-		C7EE7DFA1CA5AF4900BCCFDE /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */; };
-		C7EE7DFC1CA5B32D00BCCFDE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFB1CA5B32D00BCCFDE /* LoginController.swift */; };
-		C7EE7E001CA5B6F700BCCFDE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DFF1CA5B6F700BCCFDE /* LoginView.swift */; };
 		C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C7A3E99F1CB44F110002D5FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EE7DCC1CA5AEBA00BCCFDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7EE7DD31CA5AEBA00BCCFDE;
+			remoteInfo = InspireME;
+		};
 		C7EE7DE91CA5AEBA00BCCFDE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7EE7DCC1CA5AEBA00BCCFDE /* Project object */;
@@ -33,30 +41,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C73D3E0E1CAB6DF300C7C36B /* DashboardNavigationHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardNavigationHeader.xib; sourceTree = "<group>"; };
+		1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.release.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.release.xcconfig"; sourceTree = "<group>"; };
+		1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.debug.xcconfig"; sourceTree = "<group>"; };
+		A35DF7B6A93E22AFC671AC57 /* Pods_InspireME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardNavigationHeaderView.swift; sourceTree = "<group>"; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
-		C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
-		C7EE7DD41CA5AEBA00BCCFDE /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77333DB1CC2C51900A1A1C8 /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
+		C77333DC1CC2C51900A1A1C8 /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMEUITests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMEUITests.xctest"; sourceTree = "<absolute>"; };
+		C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InspirationCell.xib; sourceTree = "<group>"; };
+		C79278CE1CBF029D00B50FA8 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		C79278CF1CBF029D00B50FA8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		C79278D01CBF029D00B50FA8 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C79278D11CBF029D00B50FA8 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		C79278D21CBF029D00B50FA8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		C79278D31CBF053700B50FA8 /* InspirationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCollectionViewCell.swift; sourceTree = "<group>"; };
+		C79278D61CBF061100B50FA8 /* InspirationCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCardViewModel.swift; sourceTree = "<group>"; };
+		C79278D91CBF065600B50FA8 /* InspirationCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCard.swift; sourceTree = "<group>"; };
 		C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EE7DDC1CA5AEBA00BCCFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7EE7DE11CA5AEBA00BCCFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EE7DE81CA5AEBA00BCCFDE /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireMETests.swift; sourceTree = "<group>"; };
 		C7EE7DEE1CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
-		C7EE7DFB1CA5B32D00BCCFDE /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		C7EE7DFF1CA5B6F700BCCFDE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C7A3E9971CB44F110002D5FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7EE7DD11CA5AEBA00BCCFDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9436F3F31A4E27A1B4A3ABF /* Pods_InspireME.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +95,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C7BEC68E1CAA2D2800A3FE82 /* Dashboard */ = {
+		AB875B2FAC08B612FE21CD76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C7BEC68F1CAA2D3B00A3FE82 /* DashboardController.swift */,
+				A35DF7B6A93E22AFC671AC57 /* Pods_InspireME.framework */,
 			);
-			name = Dashboard;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B417ABE85F77808204E742E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */,
+				1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C79278CD1CBF027D00B50FA8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C79278CE1CBF029D00B50FA8 /* Lato-Light.ttf */,
+				C79278CF1CBF029D00B50FA8 /* OpenSans-Bold.ttf */,
+				C79278D01CBF029D00B50FA8 /* OpenSans-BoldItalic.ttf */,
+				C79278D11CBF029D00B50FA8 /* OpenSans-Italic.ttf */,
+				C79278D21CBF029D00B50FA8 /* OpenSans-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C79278D51CBF05EA00B50FA8 /* Inspiration Card */ = {
+			isa = PBXGroup;
+			children = (
+				C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */,
+				C79278D31CBF053700B50FA8 /* InspirationCollectionViewCell.swift */,
+				C79278D61CBF061100B50FA8 /* InspirationCardViewModel.swift */,
+			);
+			name = "Inspiration Card";
+			sourceTree = "<group>";
+		};
+		C79278D81CBF064500B50FA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C79278D91CBF065600B50FA8 /* InspirationCard.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C7EE7DCB1CA5AEBA00BCCFDE = {
@@ -83,25 +147,18 @@
 			children = (
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
 				C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */,
-				C7EE7DD51CA5AEBA00BCCFDE /* Products */,
+				B417ABE85F77808204E742E1 /* Pods */,
+				AB875B2FAC08B612FE21CD76 /* Frameworks */,
+				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
 			);
-			sourceTree = "<group>";
-		};
-		C7EE7DD51CA5AEBA00BCCFDE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7EE7DD41CA5AEBA00BCCFDE /* InspireME.app */,
-				C7EE7DE81CA5AEBA00BCCFDE /* InspireMETests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C7EE7DD61CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXGroup;
 			children = (
-				C7BEC68E1CAA2D2800A3FE82 /* Dashboard */,
-				C7EE7E011CA5C04800BCCFDE /* Login */,
-				C7EE7DF91CA5AF4900BCCFDE /* ViewModelProtocols.swift */,
+				C79278D81CBF064500B50FA8 /* Models */,
+				C79278D51CBF05EA00B50FA8 /* Inspiration Card */,
+				C79278CD1CBF027D00B50FA8 /* Fonts */,
 				C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */,
 				C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */,
 				C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */,
@@ -109,8 +166,8 @@
 				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
 				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
-				C73D3E0E1CAB6DF300C7C36B /* DashboardNavigationHeader.xib */,
 				C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */,
+				C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */,
 			);
 			path = InspireME;
 			sourceTree = "<group>";
@@ -124,25 +181,37 @@
 			path = InspireMETests;
 			sourceTree = "<group>";
 		};
-		C7EE7E011CA5C04800BCCFDE /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				C7EE7DFB1CA5B32D00BCCFDE /* LoginController.swift */,
-				C7EE7DFF1CA5B6F700BCCFDE /* LoginView.swift */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C7A3E9991CB44F110002D5FD /* InspireMEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7A3E9A31CB44F110002D5FD /* Build configuration list for PBXNativeTarget "InspireMEUITests" */;
+			buildPhases = (
+				C7A3E9961CB44F110002D5FD /* Sources */,
+				C7A3E9971CB44F110002D5FD /* Frameworks */,
+				C7A3E9981CB44F110002D5FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7A3E9A01CB44F110002D5FD /* PBXTargetDependency */,
+			);
+			name = InspireMEUITests;
+			productName = InspireMEUITests;
+			productReference = C77333DC1CC2C51900A1A1C8 /* InspireMEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C7EE7DD31CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7EE7DF11CA5AEBA00BCCFDE /* Build configuration list for PBXNativeTarget "InspireME" */;
 			buildPhases = (
+				3FCE52B190C10474C0AB1707 /* Check Pods Manifest.lock */,
 				C7EE7DD01CA5AEBA00BCCFDE /* Sources */,
 				C7EE7DD11CA5AEBA00BCCFDE /* Frameworks */,
 				C7EE7DD21CA5AEBA00BCCFDE /* Resources */,
+				B6D5B22115A5C64EF57B02BC /* Embed Pods Frameworks */,
+				BC3D90DDC318B8ACC4207B45 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,7 +219,7 @@
 			);
 			name = InspireME;
 			productName = InspireME;
-			productReference = C7EE7DD41CA5AEBA00BCCFDE /* InspireME.app */;
+			productReference = C77333DA1CC2C51900A1A1C8 /* InspireME.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C7EE7DE71CA5AEBA00BCCFDE /* InspireMETests */ = {
@@ -168,7 +237,7 @@
 			);
 			name = InspireMETests;
 			productName = InspireMETests;
-			productReference = C7EE7DE81CA5AEBA00BCCFDE /* InspireMETests.xctest */;
+			productReference = C77333DB1CC2C51900A1A1C8 /* InspireMETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -181,6 +250,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Brad Siegel";
 				TargetAttributes = {
+					C7A3E9991CB44F110002D5FD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C7EE7DD31CA5AEBA00BCCFDE;
+					};
 					C7EE7DD31CA5AEBA00BCCFDE = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -199,25 +272,33 @@
 				Base,
 			);
 			mainGroup = C7EE7DCB1CA5AEBA00BCCFDE;
-			productRefGroup = C7EE7DD51CA5AEBA00BCCFDE /* Products */;
+			productRefGroup = C7EE7DCB1CA5AEBA00BCCFDE;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C7EE7DD31CA5AEBA00BCCFDE /* InspireME */,
 				C7EE7DE71CA5AEBA00BCCFDE /* InspireMETests */,
+				C7A3E9991CB44F110002D5FD /* InspireMEUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C7A3E9981CB44F110002D5FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7EE7DD21CA5AEBA00BCCFDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79278CC1CBF01D300B50FA8 /* InspirationCell.xib in Resources */,
 				C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */,
 				C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */,
 				C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */,
-				C73D3E0F1CAB6DF300C7C36B /* DashboardNavigationHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,19 +311,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FCE52B190C10474C0AB1707 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D5B22115A5C64EF57B02BC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InspireME/Pods-InspireME-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC3D90DDC318B8ACC4207B45 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InspireME/Pods-InspireME-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		C7A3E9961CB44F110002D5FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7EE7DD01CA5AEBA00BCCFDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79278D41CBF053700B50FA8 /* InspirationCollectionViewCell.swift in Sources */,
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
-				C7EE7DFA1CA5AF4900BCCFDE /* ViewModelProtocols.swift in Sources */,
+				C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */,
 				C73D3E111CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift in Sources */,
-				C7EE7E001CA5B6F700BCCFDE /* LoginView.swift in Sources */,
-				C7EE7DFC1CA5B32D00BCCFDE /* LoginController.swift in Sources */,
+				C79278D71CBF061100B50FA8 /* InspirationCardViewModel.swift in Sources */,
 				C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */,
-				C7BEC6901CAA2D3B00A3FE82 /* DashboardController.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
+				C79278DA1CBF065600B50FA8 /* InspirationCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +393,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C7A3E9A01CB44F110002D5FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7EE7DD31CA5AEBA00BCCFDE /* InspireME */;
+			targetProxy = C7A3E99F1CB44F110002D5FD /* PBXContainerItemProxy */;
+		};
 		C7EE7DEA1CA5AEBA00BCCFDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C7EE7DD31CA5AEBA00BCCFDE /* InspireME */;
@@ -284,6 +425,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C7A3E9A11CB44F110002D5FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InspireMEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireMEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InspireME;
+			};
+			name = Debug;
+		};
+		C7A3E9A21CB44F110002D5FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InspireMEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireMEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InspireME;
+			};
+			name = Release;
+		};
 		C7EE7DEF1CA5AEBA00BCCFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -371,10 +534,19 @@
 		};
 		C7EE7DF21CA5AEBA00BCCFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Firebase",
+				);
 				INFOPLIST_FILE = InspireME/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Firebase",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -382,10 +554,19 @@
 		};
 		C7EE7DF31CA5AEBA00BCCFDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Firebase",
+				);
 				INFOPLIST_FILE = InspireME/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Firebase",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +599,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C7A3E9A31CB44F110002D5FD /* Build configuration list for PBXNativeTarget "InspireMEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7A3E9A11CB44F110002D5FD /* Debug */,
+				C7A3E9A21CB44F110002D5FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C7EE7DCF1CA5AEBA00BCCFDE /* Build configuration list for PBXProject "InspireME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

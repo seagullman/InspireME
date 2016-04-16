@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "600681FC7C93C2A3549D5ADAEA8D207C42B98386",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "600681FC7C93C2A3549D5ADAEA8D207C42B98386" : 0,
+    "6066148CF5BAFA9AB6C9E6952E37F845972CD138" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "39174F76-FAB9-4BB8-9450-04CC71E45232",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "600681FC7C93C2A3549D5ADAEA8D207C42B98386" : "InspireME\/",
+    "6066148CF5BAFA9AB6C9E6952E37F845972CD138" : "..\/Documents\/development"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InspireME",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InspireME.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/seagullman\/InspireME.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "600681FC7C93C2A3549D5ADAEA8D207C42B98386"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "192.168.0.2:~\/Documents\/repos\/gpi-mobile---ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6066148CF5BAFA9AB6C9E6952E37F845972CD138"
+    }
+  ]
+}

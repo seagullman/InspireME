@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol SeguePerformer: class {
     func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?)
@@ -16,8 +17,8 @@ protocol RequiresSeguePerformer: class {
     func setSeguePerformer(performer: SeguePerformer)
 }
 
-protocol ProvidesCustomTitleView : class {
-    func provideTitleView(frame: CGRect) -> UIView
+protocol RequiresFirebase: class {
+    func setFirebase(firebaseRef: Firebase)
 }
 
 class GlobalContentViewController: UIViewController,
