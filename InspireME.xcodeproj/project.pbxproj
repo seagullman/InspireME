@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9436F3F31A4E27A1B4A3ABF /* Pods_InspireME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35DF7B6A93E22AFC671AC57 /* Pods_InspireME.framework */; };
-		C73D3E111CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */; };
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
 		C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */; };
 		C79278CC1CBF01D300B50FA8 /* InspirationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */; };
@@ -20,7 +18,6 @@
 		C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */; };
 		C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */; };
 		C7EE7DED1CA5AEBA00BCCFDE /* InspireMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */; };
-		C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +40,6 @@
 /* Begin PBXFileReference section */
 		1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.release.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.release.xcconfig"; sourceTree = "<group>"; };
 		1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.debug.xcconfig"; sourceTree = "<group>"; };
-		A35DF7B6A93E22AFC671AC57 /* Pods_InspireME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardNavigationHeaderView.swift; sourceTree = "<group>"; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77333DB1CC2C51900A1A1C8 /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
@@ -66,7 +61,6 @@
 		C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireMETests.swift; sourceTree = "<group>"; };
 		C7EE7DEE1CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9436F3F31A4E27A1B4A3ABF /* Pods_InspireME.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,14 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB875B2FAC08B612FE21CD76 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A35DF7B6A93E22AFC671AC57 /* Pods_InspireME.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B417ABE85F77808204E742E1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +133,6 @@
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
 				C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */,
 				B417ABE85F77808204E742E1 /* Pods */,
-				AB875B2FAC08B612FE21CD76 /* Frameworks */,
 				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
 			);
 			sourceTree = "<group>";
@@ -159,14 +143,12 @@
 				C79278D81CBF064500B50FA8 /* Models */,
 				C79278D51CBF05EA00B50FA8 /* Inspiration Card */,
 				C79278CD1CBF027D00B50FA8 /* Fonts */,
-				C7EE7E021CA5C4E400BCCFDE /* GlobalContentViewController.swift */,
 				C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */,
 				C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */,
 				C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */,
 				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
 				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
-				C73D3E101CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift */,
 				C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */,
 			);
 			path = InspireME;
@@ -374,9 +356,7 @@
 				C79278D41CBF053700B50FA8 /* InspirationCollectionViewCell.swift in Sources */,
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
 				C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */,
-				C73D3E111CAB6F6A00C7C36B /* DashboardNavigationHeaderView.swift in Sources */,
 				C79278D71CBF061100B50FA8 /* InspirationCardViewModel.swift in Sources */,
-				C7EE7E031CA5C4E400BCCFDE /* GlobalContentViewController.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
 				C79278DA1CBF065600B50FA8 /* InspirationCard.swift in Sources */,
 			);

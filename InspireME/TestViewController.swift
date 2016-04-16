@@ -10,33 +10,30 @@ import UIKit
 import Firebase
 
 class TestViewController: UIViewController,
-                          RequiresFirebase {
-
+                          RequiresFirebase,
+                          RequiresSeguePerformer {
     
     private var firebaseRef: Firebase?
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var seguePerformer: SeguePerformer?
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var responseLabel: UILabel!
+    
+    //MARK: - RequiresFirebase
     func setFirebase(firebaseRef: Firebase) {
         self.firebaseRef = firebaseRef
+        
+        self.firebaseRef?.observeEventType(.Value, withBlock: { (snapshot) in
+            self.responseLabel.text = snapshot.value as? String
+        })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: - RequiresSeguePerformer
+    func setSeguePerformer(performer: SeguePerformer) {
+        self.seguePerformer = performer
     }
-    */
-
+    
+    @IBAction func sendToFIrebase(sender: AnyObject) {
+        firebaseRef?.setValue(textField.text)
+    }
 }

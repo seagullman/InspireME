@@ -9,40 +9,47 @@
 import UIKit
 import Firebase
 
+protocol SeguePerformer: class {
+    func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?)
+}
+
+protocol RequiresSeguePerformer: class {
+    func setSeguePerformer(performer: SeguePerformer)
+}
+
+protocol RequiresFirebase: class {
+    func setFirebase(firebaseRef: Firebase)
+}
+
 class GlobalNavigationController: UINavigationController,
-                                  UINavigationControllerDelegate {
+                                  UINavigationControllerDelegate,
+                                  SeguePerformer {
     
-    weak var navigationDelegate: UINavigationControllerDelegate? {
-        didSet {
-            self.delegate = self
-        }
-    }
+    private let firebaseRef = Firebase(url: "https://brilliant-torch-5066.firebaseio.com/")
     
-    private let firebaseRef = Firebase()
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //MARK: - Only necessary to do things here if GlobalContentController
-        //needs something upon it's creation
-        if let destination = sender?.destinationViewController as? RequiresFirebase {
-            destination.setFirebase(firebaseRef)
-        }
-    }
-    
-    func navigationController(navigationController: UINavigationController,
-                              didShowViewController viewController: UIViewController,
-                              animated: Bool) {
-        self.navigationDelegate?.navigationController?(
-            navigationController,
-            didShowViewController: viewController,
-            animated: animated)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.delegate = self
     }
     
     func navigationController(navigationController: UINavigationController,
                               willShowViewController viewController: UIViewController,
                               animated: Bool) {
-        self.navigationDelegate?.navigationController?(
-            navigationController,
-            willShowViewController: viewController,
-            animated: animated)
+        
+        if let destination = viewController as? RequiresFirebase {
+            destination.setFirebase(firebaseRef)
+        }
+        
+        if let destination = viewController as? RequiresSeguePerformer {
+            destination.setSeguePerformer(self)
+        }
+    }
+    
+    func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?) {
+        dispatch_async(dispatch_get_main_queue(),{
+                self.performSegueWithIdentifier(
+                    segueToPerform,
+                    sender: nil)
+        })
     }
 }
