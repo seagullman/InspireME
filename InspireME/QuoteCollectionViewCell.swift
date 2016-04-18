@@ -1,5 +1,5 @@
 //
-//  InspirationCollectionViewCell.swift
+//  QuoteCollectionViewCell.swift
 //  InspireME
 //
 //  Created by Brad Siegel on 4/13/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InspirationCollectionViewCell: UICollectionViewCell {
+class QuoteCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var quoteTextView: UITextView!
     @IBOutlet private weak var authorLabel: UILabel!

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class TestViewController: UIViewController,
-                          RequiresFirebase,
+                          RequiresFirebaseReference,
                           RequiresSeguePerformer {
     
     private var firebaseRef: Firebase?
@@ -20,11 +20,14 @@ class TestViewController: UIViewController,
     @IBOutlet weak var responseLabel: UILabel!
     
     //MARK: - RequiresFirebase
-    func setFirebase(firebaseRef: Firebase) {
+    func setFirebaseReference(firebaseRef: Firebase) {
         self.firebaseRef = firebaseRef
-        
+        setupFirebaseObservers()
+    }
+    
+    private func setupFirebaseObservers() {
         self.firebaseRef?.observeEventType(.Value, withBlock: { (snapshot) in
-            self.responseLabel.text = snapshot.value as? String
+                self.responseLabel.text = snapshot.value as? String
         })
     }
     
@@ -34,6 +37,12 @@ class TestViewController: UIViewController,
     }
     
     @IBAction func sendToFIrebase(sender: AnyObject) {
-        firebaseRef?.setValue(textField.text)
+        var testDic = [String: String]()
+        testDic["username"] = "blsiege"
+        testDic["password"] = "password"
+        testDic["email"] = "blsiege@suh.com"
+        testDic["joined"] = "4/17/2016"
+        
+        firebaseRef?.childByAutoId().setValue(testDic)
     }
 }

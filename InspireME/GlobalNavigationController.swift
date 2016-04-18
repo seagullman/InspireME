@@ -17,15 +17,17 @@ protocol RequiresSeguePerformer: class {
     func setSeguePerformer(performer: SeguePerformer)
 }
 
-protocol RequiresFirebase: class {
-    func setFirebase(firebaseRef: Firebase)
+protocol RequiresFirebaseReference: class {
+    func setFirebaseReference(firebaseRef: Firebase)
 }
 
 class GlobalNavigationController: UINavigationController,
                                   UINavigationControllerDelegate,
                                   SeguePerformer {
     
-    private let firebaseRef = Firebase(url: "https://brilliant-torch-5066.firebaseio.com/")
+    //extract this BASE_URL to a firebase custom class so other controllers can
+    //append to it
+    private let firebaseRef = Firebase(url: "https://brilliant-torch-5066.firebaseio.com/users/bchow")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,8 +38,8 @@ class GlobalNavigationController: UINavigationController,
                               willShowViewController viewController: UIViewController,
                               animated: Bool) {
         
-        if let destination = viewController as? RequiresFirebase {
-            destination.setFirebase(firebaseRef)
+        if let destination = viewController as? RequiresFirebaseReference {
+            destination.setFirebaseReference(firebaseRef)
         }
         
         if let destination = viewController as? RequiresSeguePerformer {

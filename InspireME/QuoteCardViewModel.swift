@@ -1,5 +1,5 @@
 //
-//  InspirationCardViewModel.swift
+//  QuoteCardViewModel.swift
 //  InspireME
 //
 //  Created by Brad Siegel on 4/13/16.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class InspirationCardViewModel {
-    var quote: String = ""
+class QuoteCardViewModel {
+    
 }

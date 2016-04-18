@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9D2FBCA9BFB9161D70F8AD6 /* Pods_InspireME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */; };
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
 		C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */; };
-		C79278CC1CBF01D300B50FA8 /* InspirationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */; };
-		C79278D41CBF053700B50FA8 /* InspirationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D31CBF053700B50FA8 /* InspirationCollectionViewCell.swift */; };
-		C79278D71CBF061100B50FA8 /* InspirationCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D61CBF061100B50FA8 /* InspirationCardViewModel.swift */; };
-		C79278DA1CBF065600B50FA8 /* InspirationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D91CBF065600B50FA8 /* InspirationCard.swift */; };
+		C79278CC1CBF01D300B50FA8 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* QuoteCell.xib */; };
+		C79278D41CBF053700B50FA8 /* QuoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D31CBF053700B50FA8 /* QuoteCollectionViewCell.swift */; };
+		C79278D71CBF061100B50FA8 /* QuoteCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D61CBF061100B50FA8 /* QuoteCardViewModel.swift */; };
+		C79278DA1CBF065600B50FA8 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D91CBF065600B50FA8 /* QuoteCard.swift */; };
+		C7C252311CC5127D00C4E248 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C252301CC5127D00C4E248 /* JSONUtil.swift */; };
 		C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */; };
 		C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */; };
 		C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */; };
@@ -40,20 +42,22 @@
 /* Begin PBXFileReference section */
 		1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.release.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.release.xcconfig"; sourceTree = "<group>"; };
 		1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.debug.xcconfig"; sourceTree = "<group>"; };
+		BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7128FAC1CC5172D00D2411E /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
+		C7128FAD1CC5172D00D2411E /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMEUITests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMEUITests.xctest"; sourceTree = "<absolute>"; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C77333DB1CC2C51900A1A1C8 /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
-		C77333DC1CC2C51900A1A1C8 /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMEUITests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMEUITests.xctest"; sourceTree = "<absolute>"; };
 		C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InspirationCell.xib; sourceTree = "<group>"; };
+		C79278CB1CBF01D300B50FA8 /* QuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
 		C79278CE1CBF029D00B50FA8 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
 		C79278CF1CBF029D00B50FA8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		C79278D01CBF029D00B50FA8 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		C79278D11CBF029D00B50FA8 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		C79278D21CBF029D00B50FA8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		C79278D31CBF053700B50FA8 /* InspirationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCollectionViewCell.swift; sourceTree = "<group>"; };
-		C79278D61CBF061100B50FA8 /* InspirationCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCardViewModel.swift; sourceTree = "<group>"; };
-		C79278D91CBF065600B50FA8 /* InspirationCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCard.swift; sourceTree = "<group>"; };
+		C79278D31CBF053700B50FA8 /* QuoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		C79278D61CBF061100B50FA8 /* QuoteCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCardViewModel.swift; sourceTree = "<group>"; };
+		C79278D91CBF065600B50FA8 /* QuoteCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
+		C7C252301CC5127D00C4E248 /* JSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtil.swift; path = InspireME/JSONUtil.swift; sourceTree = "<group>"; };
 		C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EE7DDC1CA5AEBA00BCCFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D2FBCA9BFB9161D70F8AD6 /* Pods_InspireME.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		716FEADDB6E0DCCCA08E566B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		B417ABE85F77808204E742E1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +109,16 @@
 				1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C7128FAE1CC51A7600D2411E /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
+				C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */,
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 		C79278CD1CBF027D00B50FA8 /* Fonts */ = {
@@ -109,22 +133,31 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		C79278D51CBF05EA00B50FA8 /* Inspiration Card */ = {
+		C79278D51CBF05EA00B50FA8 /* Quote Card */ = {
 			isa = PBXGroup;
 			children = (
-				C79278CB1CBF01D300B50FA8 /* InspirationCell.xib */,
-				C79278D31CBF053700B50FA8 /* InspirationCollectionViewCell.swift */,
-				C79278D61CBF061100B50FA8 /* InspirationCardViewModel.swift */,
+				C79278CB1CBF01D300B50FA8 /* QuoteCell.xib */,
+				C79278D31CBF053700B50FA8 /* QuoteCollectionViewCell.swift */,
+				C79278D61CBF061100B50FA8 /* QuoteCardViewModel.swift */,
 			);
-			name = "Inspiration Card";
+			name = "Quote Card";
 			sourceTree = "<group>";
 		};
 		C79278D81CBF064500B50FA8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C79278D91CBF065600B50FA8 /* InspirationCard.swift */,
+				C79278D91CBF065600B50FA8 /* QuoteCard.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C7C252321CC5166A00C4E248 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C7C252301CC5127D00C4E248 /* JSONUtil.swift */,
+			);
+			name = Utility;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C7EE7DCB1CA5AEBA00BCCFDE = {
@@ -132,7 +165,6 @@
 			children = (
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
 				C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */,
-				B417ABE85F77808204E742E1 /* Pods */,
 				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
 			);
 			sourceTree = "<group>";
@@ -140,14 +172,16 @@
 		C7EE7DD61CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXGroup;
 			children = (
+				C7128FAE1CC51A7600D2411E /* Global */,
 				C79278D81CBF064500B50FA8 /* Models */,
-				C79278D51CBF05EA00B50FA8 /* Inspiration Card */,
+				C79278D51CBF05EA00B50FA8 /* Quote Card */,
+				C7C252321CC5166A00C4E248 /* Utility */,
+				B417ABE85F77808204E742E1 /* Pods */,
+				716FEADDB6E0DCCCA08E566B /* Frameworks */,
 				C79278CD1CBF027D00B50FA8 /* Fonts */,
-				C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */,
+				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
 				C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */,
 				C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */,
-				C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */,
-				C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
 				C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */,
 			);
@@ -181,7 +215,7 @@
 			);
 			name = InspireMEUITests;
 			productName = InspireMEUITests;
-			productReference = C77333DC1CC2C51900A1A1C8 /* InspireMEUITests.xctest */;
+			productReference = C7128FAD1CC5172D00D2411E /* InspireMEUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		C7EE7DD31CA5AEBA00BCCFDE /* InspireME */ = {
@@ -219,7 +253,7 @@
 			);
 			name = InspireMETests;
 			productName = InspireMETests;
-			productReference = C77333DB1CC2C51900A1A1C8 /* InspireMETests.xctest */;
+			productReference = C7128FAC1CC5172D00D2411E /* InspireMETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -238,6 +272,7 @@
 					};
 					C7EE7DD31CA5AEBA00BCCFDE = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = GREW8M86PK;
 					};
 					C7EE7DE71CA5AEBA00BCCFDE = {
 						CreatedOnToolsVersion = 7.3;
@@ -277,7 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C79278CC1CBF01D300B50FA8 /* InspirationCell.xib in Resources */,
+				C79278CC1CBF01D300B50FA8 /* QuoteCell.xib in Resources */,
 				C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */,
 				C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */,
 				C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */,
@@ -353,12 +388,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C79278D41CBF053700B50FA8 /* InspirationCollectionViewCell.swift in Sources */,
+				C79278D41CBF053700B50FA8 /* QuoteCollectionViewCell.swift in Sources */,
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
 				C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */,
-				C79278D71CBF061100B50FA8 /* InspirationCardViewModel.swift in Sources */,
+				C79278D71CBF061100B50FA8 /* QuoteCardViewModel.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
-				C79278DA1CBF065600B50FA8 /* InspirationCard.swift in Sources */,
+				C79278DA1CBF065600B50FA8 /* QuoteCard.swift in Sources */,
+				C7C252311CC5127D00C4E248 /* JSONUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +553,8 @@
 			baseConfigurationReference = 1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Firebase",
@@ -529,6 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -537,6 +576,8 @@
 			baseConfigurationReference = 1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Firebase",
@@ -549,6 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

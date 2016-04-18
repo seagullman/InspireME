@@ -35,19 +35,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIa-Vf-Ypi">
-                                <rect key="frame" x="54" y="301" width="492" height="30"/>
+                                <rect key="frame" x="54" y="144" width="492" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abb-o6-afh">
-                                <rect key="frame" x="242" y="372" width="116" height="30"/>
-                                <state key="normal" title="Send to Firebase"/>
-                                <connections>
-                                    <action selector="sendToFIrebase:" destination="xqc-eZ-B1v" eventType="touchUpInside" id="bER-jF-AiR"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acn-9z-zAM">
-                                <rect key="frame" x="197" y="215" width="206" height="21"/>
+                                <rect key="frame" x="197" y="115" width="206" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="IeO-Ds-Pin"/>
                                 </constraints>
@@ -55,16 +48,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abb-o6-afh">
+                                <rect key="frame" x="242" y="196" width="116" height="30"/>
+                                <state key="normal" title="Send to Firebase"/>
+                                <connections>
+                                    <action selector="sendToFIrebase:" destination="xqc-eZ-B1v" eventType="touchUpInside" id="bER-jF-AiR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TIa-Vf-Ypi" firstAttribute="centerX" secondItem="mBI-mg-Net" secondAttribute="centerX" id="1oa-Gi-qIb"/>
                             <constraint firstItem="TIa-Vf-Ypi" firstAttribute="leading" secondItem="mBI-mg-Net" secondAttribute="leadingMargin" constant="34" id="3kc-2v-9tI"/>
                             <constraint firstItem="acn-9z-zAM" firstAttribute="centerX" secondItem="TIa-Vf-Ypi" secondAttribute="centerX" id="G4o-Yr-nSN"/>
-                            <constraint firstItem="c4x-pN-LrE" firstAttribute="top" secondItem="Abb-o6-afh" secondAttribute="bottom" constant="198" id="Isq-aB-bJK"/>
+                            <constraint firstItem="c4x-pN-LrE" firstAttribute="top" secondItem="Abb-o6-afh" secondAttribute="bottom" constant="374" id="Isq-aB-bJK"/>
                             <constraint firstItem="TIa-Vf-Ypi" firstAttribute="centerX" secondItem="Abb-o6-afh" secondAttribute="centerX" id="KY2-Ct-Aep"/>
                             <constraint firstItem="TIa-Vf-Ypi" firstAttribute="top" secondItem="acn-9z-zAM" secondAttribute="bottom" constant="65" id="gHg-G1-ehL"/>
-                            <constraint firstItem="Abb-o6-afh" firstAttribute="top" secondItem="TIa-Vf-Ypi" secondAttribute="bottom" constant="41" id="rmQ-Iw-mix"/>
+                            <constraint firstItem="Abb-o6-afh" firstAttribute="top" secondItem="TIa-Vf-Ypi" secondAttribute="bottom" constant="22" id="rmQ-Iw-mix"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYx-KA-iGf"/>

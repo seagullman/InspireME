@@ -1,16 +1,35 @@
 //
-//  InspirationCard.swift
+//  JSONUtil.swift
 //  InspireME
 //
-//  Created by Brad Siegel on 4/13/16.
+//  Created by Brad Siegel on 4/18/16.
 //  Copyright © 2016 Brad Siegel. All rights reserved.
 //
 
 import Foundation
 
-/** Server model*/
+protocol JSONEncodable {
+    func encodeToJSON() -> AnyObject
+}
 
-//TODO: move this somewhere else
+class JSONUtil {
+    
+    static func rejectNil(source: [String:AnyObject?]) -> [String:AnyObject]? {
+        var destination = [String:AnyObject]()
+        for (key, nillableValue) in source {
+            if let value: AnyObject = nillableValue {
+                destination[key] = value
+            }
+        }
+        
+        if destination.isEmpty {
+            return nil
+        }
+        
+        return destination
+    }
+}
+
 private let dateFormatter = { () -> NSDateFormatter in
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"
@@ -27,6 +46,9 @@ private let dateFormatterWithTimezone = { () -> NSDateFormatter in
     return dateFormatter
 }()
 
+//
+// Date formatter for NSDate
+//
 private let formatters = [dateFormatter, dateFormatterWithTimezone]
 
 extension NSDate {
@@ -46,20 +68,4 @@ extension NSDate {
     func encodeToJSON() -> AnyObject {
         return dateFormatterWithTimezone.stringFromDate(self)
     }
-}
-
-public struct InspirationCard {
-    public var id: String?
-    public var quote: String?
-    public var user: String?
-    public var datePosted: NSDate?
-    
-    public init?(sourceDictionary: Dictionary<String, AnyObject>) {
-        self.id = sourceDictionary["id"] as? String
-        self.quote = sourceDictionary["quote"] as? String
-        self.user = sourceDictionary["user"] as? String
-        self.datePosted = NSDate.create(sourceDictionary["datePosted"])
-    }
-    
-    //TODO: logic to encode to JSON
 }
