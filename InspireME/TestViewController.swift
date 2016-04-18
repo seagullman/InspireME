@@ -38,7 +38,7 @@ class TestViewController: UIViewController,
     
     @IBAction func sendToFIrebase(sender: AnyObject) {
         var testDic = [String: String]()
-        testDic["username"] = "blsiege"
+        testDic["username"] = self.textField.text
         testDic["password"] = "password"
         testDic["email"] = "blsiege@suh.com"
         testDic["joined"] = "4/17/2016"

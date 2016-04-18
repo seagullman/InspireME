@@ -27,7 +27,7 @@ class GlobalNavigationController: UINavigationController,
     
     //extract this BASE_URL to a firebase custom class so other controllers can
     //append to it
-    private let firebaseRef = Firebase(url: "https://brilliant-torch-5066.firebaseio.com/users/bchow")
+    private let firebaseRef = Firebase(url: "https://brilliant-torch-5066.firebaseio.com/users")
     
     override func awakeFromNib() {
         super.awakeFromNib()
