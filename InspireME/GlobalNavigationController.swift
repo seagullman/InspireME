@@ -24,10 +24,9 @@ protocol RequiresFirebaseReference: class {
 class GlobalNavigationController: UINavigationController,
                                   UINavigationControllerDelegate,
                                   SeguePerformer {
-    
-    //extract this BASE_URL to a firebase custom class so other controllers can
-    //append to it
-    private let firebaseRef = Firebase(url: "https://brilliant-torch-5066.firebaseio.com/users")
+
+    private let firebaseRef = Firebase(
+        url: "https://brilliant-torch-5066.firebaseio.com")
     
     override func awakeFromNib() {
         super.awakeFromNib()

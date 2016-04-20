@@ -26,9 +26,24 @@ class TestViewController: UIViewController,
     }
     
     private func setupFirebaseObservers() {
-        self.firebaseRef?.observeEventType(.Value, withBlock: { (snapshot) in
+        self.firebaseRef?.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            print("Response: \(snapshot.children))")
                 self.responseLabel.text = snapshot.value as? String
+            self.parseResponse(snapshot.value)
         })
+    }
+    
+    func parseResponse(children: [String: AnyObject]) {
+        var dict = [String: String]()
+        var index = 0
+
+        var quotes = Array<QuoteCard>()
+        for childSnap in children {
+            quotes.append(QuoteCard(source: childSnap))
+        }
+        
+        let count = 1
+    
     }
     
     //MARK: - RequiresSeguePerformer
@@ -43,6 +58,6 @@ class TestViewController: UIViewController,
         testDic["email"] = "blsiege@suh.com"
         testDic["joined"] = "4/17/2016"
         
-        firebaseRef?.childByAutoId().setValue(testDic)
+        firebaseRef?.childByAppendingPath("posts").setValue(testDic)
     }
 }

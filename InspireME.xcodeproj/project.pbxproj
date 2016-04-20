@@ -44,6 +44,8 @@
 		1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.debug.xcconfig"; sourceTree = "<group>"; };
 		BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
+		C761E5F11CC7049B00D3BDAC /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C761E5F21CC7049B00D3BDAC /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C79278CB1CBF01D300B50FA8 /* QuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
@@ -55,8 +57,6 @@
 		C79278D31CBF053700B50FA8 /* QuoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		C79278D61CBF061100B50FA8 /* QuoteCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCardViewModel.swift; sourceTree = "<group>"; };
 		C79278D91CBF065600B50FA8 /* QuoteCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
-		C794D8D81CC58E10003ACC4E /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
-		C794D8D91CC58E10003ACC4E /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMEUITests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMEUITests.xctest"; sourceTree = "<absolute>"; };
 		C7C252301CC5127D00C4E248 /* JSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtil.swift; path = InspireME/JSONUtil.swift; sourceTree = "<group>"; };
 		C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7EE7DDC1CA5AEBA00BCCFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +121,20 @@
 			name = Global;
 			sourceTree = "<group>";
 		};
+		C761E5F31CC704EB00D3BDAC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C761E5F41CC704F600D3BDAC /* Create Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Create Account";
+			sourceTree = "<group>";
+		};
 		C79278CD1CBF027D00B50FA8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,12 +180,16 @@
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
 				C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */,
 				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
+				C761E5F11CC7049B00D3BDAC /* InspireMETests.xctest */,
+				C761E5F21CC7049B00D3BDAC /* InspireMEUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		C7EE7DD61CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXGroup;
 			children = (
+				C761E5F41CC704F600D3BDAC /* Create Account */,
+				C761E5F31CC704EB00D3BDAC /* Login */,
 				C7128FAE1CC51A7600D2411E /* Global */,
 				C79278D81CBF064500B50FA8 /* Models */,
 				C79278D51CBF05EA00B50FA8 /* Quote Card */,
@@ -215,7 +233,7 @@
 			);
 			name = InspireMEUITests;
 			productName = InspireMEUITests;
-			productReference = C794D8D91CC58E10003ACC4E /* InspireMEUITests.xctest */;
+			productReference = C761E5F21CC7049B00D3BDAC /* InspireMEUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		C7EE7DD31CA5AEBA00BCCFDE /* InspireME */ = {
@@ -253,7 +271,7 @@
 			);
 			name = InspireMETests;
 			productName = InspireMETests;
-			productReference = C794D8D81CC58E10003ACC4E /* InspireMETests.xctest */;
+			productReference = C761E5F11CC7049B00D3BDAC /* InspireMETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
