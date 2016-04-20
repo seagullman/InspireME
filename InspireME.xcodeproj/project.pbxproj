@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		B9D2FBCA9BFB9161D70F8AD6 /* Pods_InspireME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */; };
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
-		C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */; };
+		C761E5F61CC707EC00D3BDAC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5F51CC707EC00D3BDAC /* LoginController.swift */; };
+		C761E5F81CC70C0600D3BDAC /* AccountRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */; };
+		C761E5FC1CC72B5700D3BDAC /* InspirationFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5FB1CC72B5700D3BDAC /* InspirationFeedController.swift */; };
 		C79278CC1CBF01D300B50FA8 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* QuoteCell.xib */; };
 		C79278D41CBF053700B50FA8 /* QuoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D31CBF053700B50FA8 /* QuoteCollectionViewCell.swift */; };
 		C79278D71CBF061100B50FA8 /* QuoteCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D61CBF061100B50FA8 /* QuoteCardViewModel.swift */; };
@@ -44,10 +46,12 @@
 		1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.debug.xcconfig"; sourceTree = "<group>"; };
 		BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
-		C761E5F11CC7049B00D3BDAC /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C761E5F21CC7049B00D3BDAC /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C761E5F11CC7049B00D3BDAC /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
+		C761E5F21CC7049B00D3BDAC /* InspireMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMEUITests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMEUITests.xctest"; sourceTree = "<absolute>"; };
+		C761E5F51CC707EC00D3BDAC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationController.swift; sourceTree = "<group>"; };
+		C761E5FB1CC72B5700D3BDAC /* InspirationFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationFeedController.swift; sourceTree = "<group>"; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C79278CB1CBF01D300B50FA8 /* QuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
 		C79278CE1CBF029D00B50FA8 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
 		C79278CF1CBF029D00B50FA8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		C761E5F31CC704EB00D3BDAC /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C761E5F51CC707EC00D3BDAC /* LoginController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -131,8 +136,25 @@
 		C761E5F41CC704F600D3BDAC /* Create Account */ = {
 			isa = PBXGroup;
 			children = (
+				C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */,
 			);
 			name = "Create Account";
+			sourceTree = "<group>";
+		};
+		C761E5F91CC72B0900D3BDAC /* Authenticated */ = {
+			isa = PBXGroup;
+			children = (
+				C761E5FA1CC72B1D00D3BDAC /* Inspiration Feed */,
+			);
+			name = Authenticated;
+			sourceTree = "<group>";
+		};
+		C761E5FA1CC72B1D00D3BDAC /* Inspiration Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C761E5FB1CC72B5700D3BDAC /* InspirationFeedController.swift */,
+			);
+			name = "Inspiration Feed";
 			sourceTree = "<group>";
 		};
 		C79278CD1CBF027D00B50FA8 /* Fonts */ = {
@@ -180,14 +202,13 @@
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
 				C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */,
 				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
-				C761E5F11CC7049B00D3BDAC /* InspireMETests.xctest */,
-				C761E5F21CC7049B00D3BDAC /* InspireMEUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		C7EE7DD61CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXGroup;
 			children = (
+				C761E5F91CC72B0900D3BDAC /* Authenticated */,
 				C761E5F41CC704F600D3BDAC /* Create Account */,
 				C761E5F31CC704EB00D3BDAC /* Login */,
 				C7128FAE1CC51A7600D2411E /* Global */,
@@ -201,7 +222,6 @@
 				C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */,
 				C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
-				C77333DD1CC2C70D00A1A1C8 /* TestViewController.swift */,
 			);
 			path = InspireME;
 			sourceTree = "<group>";
@@ -408,11 +428,13 @@
 			files = (
 				C79278D41CBF053700B50FA8 /* QuoteCollectionViewCell.swift in Sources */,
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
-				C77333DE1CC2C70D00A1A1C8 /* TestViewController.swift in Sources */,
+				C761E5F81CC70C0600D3BDAC /* AccountRegistrationController.swift in Sources */,
+				C761E5FC1CC72B5700D3BDAC /* InspirationFeedController.swift in Sources */,
 				C79278D71CBF061100B50FA8 /* QuoteCardViewModel.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
 				C79278DA1CBF065600B50FA8 /* QuoteCard.swift in Sources */,
 				C7C252311CC5127D00C4E248 /* JSONUtil.swift in Sources */,
+				C761E5F61CC707EC00D3BDAC /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
