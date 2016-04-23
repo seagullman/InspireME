@@ -9,6 +9,14 @@
 import UIKit
 import Firebase
 
+extension NSDate {
+    func currentDate() -> String{
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        return formatter.stringFromDate(self)
+    }
+}
+
 class AccountRegistrationController: UIViewController,
                                      RequiresSeguePerformer {
     
@@ -30,20 +38,21 @@ class AccountRegistrationController: UIViewController,
                     password: self.passwordField.text,
                     withCompletionBlock: { (error, auth) -> Void in
                         //TODO: - Handle error != nil here
-                        let user = User(source:[
+                        let user = User(sourceDictionary:[
                             "id": auth.uid,
                             "firstName": "\(self.emailField.text!)", //TODO: change this once registration screen is done
-                            "lastName": "Siegel"]
+                            "lastName": "Siegel",
+                            "dateJoined": "\(NSDate().currentDate())"]
                         )
                         
-                        self.firebaseRef.childByAppendingPath("\(ChildPath.Users)\(auth.uid)").setValue(user.encodeToJSON())
+                        self.firebaseRef.childByAppendingPath("\(ChildPath.Users.rawValue)/\(auth.uid)").setValue(user.encodeToJSON())
                         
                         self.seguePerformer?.navigateWithSegue(
                             "landingScreen",
                             dataForSegue: nil)
                 })
             } else {
-               self.errorLabel.text = ErrorMapper.errorTextForCode(error.code.description)
+               self.errorLabel.text = error.firebaseDescription()
             }
         }
     }

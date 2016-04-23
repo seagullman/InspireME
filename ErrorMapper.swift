@@ -8,23 +8,22 @@
 
 import Foundation
 
-class ErrorMapper {
-    
-    private enum FirebaseError: String {
-        case EmailTaken = "This email address is already registered to an account."
-        case EmptyPassword = "Password cannot be blank. Please enter a password."
-        case InvalidEmail = "Please enter a valid email address."
-    }
-    
-    static func errorTextForCode(errorCode: String) -> String {
+
+extension NSError {
+
+     func firebaseDescription() -> String {
+        let emailTaken = "This email address is already registered to an account."
+        let emptyPassword = "Password cannot be blank. Please enter a password."
+        let invalidEmail = "Please enter a valid email address."
+        
         var error: String
-        switch errorCode {
-        case "-5":
-            error = FirebaseError.InvalidEmail.rawValue
-        case "-6":
-            error = FirebaseError.EmptyPassword.rawValue
-        case "-9":
-            error = FirebaseError.EmailTaken.rawValue
+        switch code {
+        case -5:
+            error = emailTaken
+        case -6:
+            error = emptyPassword
+        case -9:
+            error = invalidEmail
         default:
             error = "Oops, something went wrong."
         }

@@ -12,11 +12,13 @@ public struct User: JSONEncodable {
     
     var firstName: String?
     var lastName: String?
+    var dateJoined: String?
     //var posts: [Post]
     
-    init(source: [String: AnyObject]) {
-        self.firstName = source["firstName"] as? String
-        self.lastName = source["lastName"] as? String
+    init(sourceDictionary: [String: AnyObject]) {
+        self.firstName = sourceDictionary["firstName"] as? String
+        self.lastName = sourceDictionary["lastName"] as? String
+        self.dateJoined = NSDate().currentDate()
     }
     
     //MARK: - JSONEncodable
@@ -24,6 +26,7 @@ public struct User: JSONEncodable {
         var nillableDictionary = [String:AnyObject?]()
         nillableDictionary["firstName"] = self.firstName
         nillableDictionary["lastNamed"] = self.lastName
+        nillableDictionary["dateJoined"] = self.dateJoined
         let dictionary: [String:AnyObject] = JSONUtil.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }

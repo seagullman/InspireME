@@ -30,8 +30,7 @@ class LoginController: UIViewController,
                         dataForSegue: nil)
                     
                 } else {
-                    self.errorLabel.text = ErrorMapper.errorTextForCode(
-                        error.code.description)
+                    self.errorLabel.text = error.firebaseDescription()
                 }
         })
     }
