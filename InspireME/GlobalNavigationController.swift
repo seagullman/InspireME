@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 
+enum Segue: String {
+    case Register = "registration"
+}
 protocol SeguePerformer: class {
     func navigateWithSegue(segueToPerform: String, dataForSegue: AnyObject?)
 }
@@ -17,16 +20,9 @@ protocol RequiresSeguePerformer: class {
     func setSeguePerformer(performer: SeguePerformer)
 }
 
-protocol RequiresFirebaseReference: class {
-    func setFirebaseReference(firebaseRef: Firebase)
-}
-
 class GlobalNavigationController: UINavigationController,
                                   UINavigationControllerDelegate,
                                   SeguePerformer {
-
-    private let firebaseRef = Firebase(
-        url: "https://brilliant-torch-5066.firebaseio.com")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,10 +32,6 @@ class GlobalNavigationController: UINavigationController,
     func navigationController(navigationController: UINavigationController,
                               willShowViewController viewController: UIViewController,
                               animated: Bool) {
-        
-        if let destination = viewController as? RequiresFirebaseReference {
-            destination.setFirebaseReference(firebaseRef)
-        }
         
         if let destination = viewController as? RequiresSeguePerformer {
             destination.setSeguePerformer(self)

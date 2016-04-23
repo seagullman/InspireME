@@ -5,37 +5,15 @@
 //  Created by Brad Siegel on 4/19/16.
 //  Copyright © 2016 Brad Siegel. All rights reserved.
 //
-//TODO: - move this somewhere else and possibly refactor
-enum FirebaseError: String {
-    case EmailTaken = "This email address is already registered to an account."
-    case EmptyPassword = "Password cannot be blank. Please enter a password."
-    case InvalidEmail = "Please enter a valid email address."
-}
-
-func errorTextForCode(errorCode: String) -> String {
-    var error: String
-    switch errorCode {
-    case "-5":
-        error = FirebaseError.InvalidEmail.rawValue
-    case "-6":
-        error = FirebaseError.EmptyPassword.rawValue
-    case "-9":
-        error = FirebaseError.EmailTaken.rawValue
-    default:
-         error = "Oops, something went wrong."
-    }
-    return error
-}
 
 import UIKit
 import Firebase
 
 class AccountRegistrationController: UIViewController,
-                                     RequiresSeguePerformer,
-                                     RequiresFirebaseReference {
+                                     RequiresSeguePerformer {
     
     private var seguePerformer: SeguePerformer?
-    private var firebaseRef: Firebase?
+    private var firebaseRef = Firebase(url: NetworkFirebase.rootURL)
     
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
@@ -51,12 +29,21 @@ class AccountRegistrationController: UIViewController,
                     self.emailField.text,
                     password: self.passwordField.text,
                     withCompletionBlock: { (error, auth) -> Void in
-                                    self.seguePerformer?.navigateWithSegue(
-                                        "landingScreen",
-                                        dataForSegue: nil)
+                        //TODO: - Handle error != nil here
+                        let user = User(source:[
+                            "id": auth.uid,
+                            "firstName": "\(self.emailField.text!)", //TODO: change this once registration screen is done
+                            "lastName": "Siegel"]
+                        )
+                        
+                        self.firebaseRef.childByAppendingPath("\(ChildPath.Users)\(auth.uid)").setValue(user.encodeToJSON())
+                        
+                        self.seguePerformer?.navigateWithSegue(
+                            "landingScreen",
+                            dataForSegue: nil)
                 })
             } else {
-               self.errorLabel.text = errorTextForCode(error.code.description)
+               self.errorLabel.text = ErrorMapper.errorTextForCode(error.code.description)
             }
         }
     }
@@ -64,10 +51,5 @@ class AccountRegistrationController: UIViewController,
     //MARK: - RequiresSeguePerformer
     func setSeguePerformer(performer: SeguePerformer) {
         self.seguePerformer = performer
-    }
-    
-    //MARK: - RequiresFirebaseReference
-    func setFirebaseReference(firebaseRef: Firebase) {
-        self.firebaseRef = firebaseRef
     }
 }

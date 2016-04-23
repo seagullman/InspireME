@@ -68,4 +68,32 @@ extension NSDate {
     func encodeToJSON() -> AnyObject {
         return dateFormatterWithTimezone.stringFromDate(self)
     }
+    
 }
+//extension Array : JSONObject {
+//    
+//    static func create(json: AnyObject?) -> Array? {
+//        guard let json = json else {
+//            return nil
+//        }
+//        return Array(json:json)
+//    }
+//    
+//    init?(json: AnyObject) {
+//        guard let jsonArray = json as? [AnyObject] else {
+//            return nil
+//        }
+//        self.init()
+//        for element in jsonArray {
+//            if let type = self.dynamicType.Element.self as? JSONObject.Type {
+//                if let newObject = type.create(element) {
+//                    self.append(newObject as! Element)
+//                }
+//            } else {
+//                if let newObject = element as? Element {
+//                    self.append(newObject)
+//                }
+//            }
+//        }
+//}
+

@@ -10,29 +10,40 @@ import Foundation
 import Firebase
 
 class LoginController: UIViewController,
-                       RequiresSeguePerformer,
-                       RequiresFirebaseReference {
+                       RequiresSeguePerformer {
 
+    private var firebaseRef = Firebase(url: NetworkFirebase.rootURL)
+    
     private var seguePerformer: SeguePerformer?
-    private var firebaseRef: Firebase?
     @IBOutlet private weak var passwordField: UITextField!
-    @IBOutlet private weak var usernameField: UITextField!
+    @IBOutlet private weak var emailField: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
     
     @IBAction func login(sender: AnyObject) {
-        
+        self.firebaseRef?.authUser(
+            self.emailField.text,
+            password: self.passwordField.text,
+            withCompletionBlock: { (error, auth) -> Void in
+                if error == nil {
+                    self.seguePerformer?.navigateWithSegue(
+                        "landingScreen",
+                        dataForSegue: nil)
+                    
+                } else {
+                    self.errorLabel.text = ErrorMapper.errorTextForCode(
+                        error.code.description)
+                }
+        })
     }
 
     @IBAction func register(sender: AnyObject) {
-        self.seguePerformer?.navigateWithSegue("registration", dataForSegue: nil)
+        self.seguePerformer?.navigateWithSegue(
+            Segue.Register.rawValue,
+            dataForSegue: nil)
     }
     
     //MARK: - RequiresSeguePerformer
     func setSeguePerformer(performer: SeguePerformer) {
         self.seguePerformer = performer
-    }
-    
-    //MARK: - RequiresFirebaseReference
-    func setFirebaseReference(firebaseRef: Firebase) {
-        self.firebaseRef = firebaseRef
     }
 }

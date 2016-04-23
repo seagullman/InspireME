@@ -1,5 +1,5 @@
 //
-//  QuoteCard.swift
+//  Post.swift
 //  InspireME
 //
 //  Created by Brad Siegel on 4/13/16.
@@ -8,25 +8,25 @@
 
 import Foundation
 
-public struct  QuoteCard: JSONEncodable {
+public struct  Post: JSONEncodable {
     var id: String?
     var quote: String? 
     var author: String?
-    var user: String? //should this be here?
-    var datePosted: String?
+    var userId: String? //should this be here?
+    var datePosted: NSDate?
 
     init(source: [String: AnyObject]) {
         self.id = "1"
-        self.quote = source["email"] as? String
-        self.author = source["joined"] as? String
-        self.user = source["password"] as? String
-        self.datePosted = source["username"] as? String
+        self.quote = source["quote"] as? String
+        self.author = source["author"] as? String
+        self.userId = source["userId"] as? String
+        self.datePosted = NSDate.create(source["datePosted"])
 
     }
     
     // MARK: - JSONEncodable
     public func encodeToJSON() -> AnyObject {
-        var nillableDictionary = [String:AnyObject?]()
+        let nillableDictionary = [String:AnyObject?]()
 //        nillableDictionary["id"] = self.id
 //        nillableDictionary["quote"] = self.quote
 //        nillableDictionary["user"] = self.user

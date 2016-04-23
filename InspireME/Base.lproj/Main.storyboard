@@ -13,6 +13,8 @@
             <string>Lato-Light</string>
             <string>Lato-Light</string>
             <string>Lato-Light</string>
+            <string>Lato-Light</string>
+            <string>Lato-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -54,23 +56,15 @@
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-uM-Lbv">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-uM-Lbv">
                                 <rect key="frame" x="210" y="260" width="180" height="33"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEG-3T-72X">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEG-3T-72X">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="login:" destination="xqc-eZ-B1v" eventType="touchUpInside" id="LDF-Rd-ZuO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-hz-tit">
-                                        <rect key="frame" x="90" y="0.0" width="90" height="33"/>
-                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="Register"/>
-                                        <connections>
-                                            <action selector="register:" destination="xqc-eZ-B1v" eventType="touchUpInside" id="lhg-sK-rZA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -78,7 +72,7 @@
                                     <constraint firstAttribute="width" constant="180" id="BzL-JC-Wl7"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-P2-lMT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-P2-lMT">
                                 <rect key="frame" x="210" y="184" width="180" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="dOt-Ln-gQ4"/>
@@ -86,22 +80,66 @@
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQb-Ew-91U">
+                                <rect key="frame" x="227" y="341" width="146.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="xz7-p2-u91"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xz7-p2-u91"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgy-O1-5GY">
+                                <rect key="frame" x="11" y="159" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                <color key="textColor" red="0.8627451062" green="0.1178684607" blue="0.099945264239999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-hz-tit">
+                                <rect key="frame" x="258" y="360" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="wqo-NM-eVC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                <state key="normal" title="Register now"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wqo-NM-eVC"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="register:" destination="xqc-eZ-B1v" eventType="touchUpInside" id="lhg-sK-rZA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SdF-uM-Lbv" firstAttribute="trailing" secondItem="a5z-Uj-w3W" secondAttribute="trailing" id="72i-aO-HVh"/>
+                            <constraint firstItem="Pgy-O1-5GY" firstAttribute="leading" secondItem="mBI-mg-Net" secondAttribute="leading" constant="11" id="76G-6B-VDN"/>
                             <constraint firstItem="4Va-P2-lMT" firstAttribute="centerX" secondItem="mBI-mg-Net" secondAttribute="centerX" id="Du5-KO-khh"/>
                             <constraint firstItem="4Va-P2-lMT" firstAttribute="top" secondItem="3Rd-H1-Jn0" secondAttribute="bottom" constant="120" id="LAR-Nr-4Mk"/>
                             <constraint firstItem="a5z-Uj-w3W" firstAttribute="leading" secondItem="4Va-P2-lMT" secondAttribute="leading" id="f6Q-3o-iJL"/>
+                            <constraint firstItem="SQb-Ew-91U" firstAttribute="centerX" secondItem="DEG-3T-72X" secondAttribute="centerX" id="gwd-Xg-yTb"/>
+                            <constraint firstItem="LRE-hz-tit" firstAttribute="top" secondItem="SQb-Ew-91U" secondAttribute="bottom" constant="1" id="iKS-nc-gql"/>
                             <constraint firstItem="SdF-uM-Lbv" firstAttribute="top" secondItem="a5z-Uj-w3W" secondAttribute="bottom" constant="8" id="irI-Fu-yPD"/>
+                            <constraint firstItem="LRE-hz-tit" firstAttribute="centerX" secondItem="SQb-Ew-91U" secondAttribute="centerX" id="mOK-V7-ktv"/>
                             <constraint firstItem="a5z-Uj-w3W" firstAttribute="top" secondItem="4Va-P2-lMT" secondAttribute="bottom" constant="8" id="pSo-1V-VjO"/>
+                            <constraint firstItem="4Va-P2-lMT" firstAttribute="top" secondItem="Pgy-O1-5GY" secondAttribute="bottom" constant="25" id="q2o-WL-lXq"/>
+                            <constraint firstItem="SQb-Ew-91U" firstAttribute="top" secondItem="DEG-3T-72X" secondAttribute="bottom" constant="48" id="wCm-4B-yPc"/>
                             <constraint firstItem="SdF-uM-Lbv" firstAttribute="leading" secondItem="a5z-Uj-w3W" secondAttribute="leading" id="xVu-Ac-pch"/>
+                            <constraint firstAttribute="trailing" secondItem="Pgy-O1-5GY" secondAttribute="trailing" constant="29" id="yGz-dM-Cx1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYx-KA-iGf"/>
                     <connections>
+                        <outlet property="emailField" destination="4Va-P2-lMT" id="A8h-zY-SbP"/>
+                        <outlet property="errorLabel" destination="Pgy-O1-5GY" id="2pP-Zc-D1l"/>
                         <outlet property="passwordField" destination="a5z-Uj-w3W" id="Rwq-Ab-fP6"/>
-                        <outlet property="usernameField" destination="4Va-P2-lMT" id="XZk-wf-52a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enA-iC-pNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,7 +231,7 @@
                                     <constraint firstAttribute="width" constant="296" id="xGk-ml-REt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
