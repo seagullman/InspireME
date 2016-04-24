@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 public struct User: JSONEncodable {
     
@@ -15,18 +16,6 @@ public struct User: JSONEncodable {
     var email: String
     var dateJoined: NSDate?
     //var posts: [Post]
-    
-    init(sourceDictionary: [String: AnyObject]) {
-        self.firstName = sourceDictionary["firstName"] as! String
-        self.lastName = sourceDictionary["lastName"] as! String
-        self.email = sourceDictionary["email"] as! String
-        let dateFormatter = NSDateFormatter() //TODO: - revist this
-        dateFormatter.dateFormat = "MM/DD/yy"
-        let dateString = sourceDictionary["dateJoined"] as! String
-        if let dateJoined = dateFormatter.dateFromString(dateString) {
-            self.dateJoined = dateJoined
-        }
-    }
     
     init(firstName: String,
          lastName: String,
@@ -38,11 +27,24 @@ public struct User: JSONEncodable {
         self.dateJoined = dateJoined
     }
     
+    init(snapshot: FDataSnapshot) {
+        self.firstName = snapshot.value["firstName"] as! String
+        self.lastName = snapshot.value["lastName"] as! String
+        self.email = snapshot.value["email"] as! String
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/DD/yy"
+        let dateString = snapshot.value["dateJoined"] as! String
+        if let dateJoined = dateFormatter.dateFromString(dateString) {
+            self.dateJoined = dateJoined
+        }
+    }
+    
     //MARK: - JSONEncodable
     func encodeToJSON() -> AnyObject {
         var nillableDictionary = [String:AnyObject?]()
         nillableDictionary["firstName"] = self.firstName
-        nillableDictionary["lastNamed"] = self.lastName
+        nillableDictionary["lastName"] = self.lastName
         nillableDictionary["email"] = self.email
         nillableDictionary["dateJoined"] = self.dateJoined?.encodeToJSON()
         let dictionary: [String:AnyObject] = JSONUtil.rejectNil(nillableDictionary) ?? [:]

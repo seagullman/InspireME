@@ -16,7 +16,9 @@ extension NSError {
         case -5:
             description = ErrorDescription.InvalidEmail.rawValue
         case -6:
-            description = ErrorDescription.EmptyPassword.rawValue
+            description = ErrorDescription.IncorrectPassword.rawValue
+        case -8:
+            description = ErrorDescription.UserNotFound.rawValue
         case -9:
             description = ErrorDescription.EmailTaken.rawValue
         default:
@@ -28,6 +30,7 @@ extension NSError {
 
 private enum ErrorDescription: String {
     case EmailTaken = "This email address is already registered to an account."
-    case EmptyPassword = "Password cannot be blank. Please enter a password."
-    case InvalidEmail = "Please enter a valid email address/password."
+    case IncorrectPassword = "Invalid email/password."
+    case InvalidEmail = "Please enter a valid email/password."
+    case UserNotFound = "User not found."
 }

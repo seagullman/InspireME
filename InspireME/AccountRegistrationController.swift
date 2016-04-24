@@ -23,7 +23,7 @@ class AccountRegistrationController: UIViewController,
     @IBAction func createAccount(sender: AnyObject) {
             NetworkFirebase().createUser(
                 userModel(),
-                password: emailField.text!) { (error) in
+                password: passwordField.text!) { (error) in
                     if error == nil {
                         self.seguePerformer?.navigateWithSegue(
                             "landingScreen",
