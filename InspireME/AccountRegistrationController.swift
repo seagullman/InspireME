@@ -18,7 +18,6 @@ class AccountRegistrationController: UIViewController,
     @IBOutlet private weak var confirmPasswordField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
-    //MARK: - RequiresSeguePerformer
     private var seguePerformer: SeguePerformer?
     
     @IBAction func createAccount(sender: AnyObject) {

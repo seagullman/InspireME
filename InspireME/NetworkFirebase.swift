@@ -36,11 +36,23 @@ class NetworkFirebase {
                             let childPath = self.firebaseRef.childByAppendingPath("\(ChildPath.Users.rawValue)/\(auth.uid)")
                             childPath.setValue(user.encodeToJSON())
                             
-                            completion(error: nil)
+                            completion(error: error)
                     })
                 } else {
                     completion(error: error)
                 }
         }
+    }
+    
+    func login(email: String,
+               password: String,
+               completion: (error: NSError?) -> Void) {
+        
+        self.firebaseRef.authUser(
+            email,
+            password: password,
+            withCompletionBlock: { (error, auth) -> Void in
+                completion(error: error)
+        })
     }
 }

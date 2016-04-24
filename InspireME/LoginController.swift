@@ -6,36 +6,34 @@
 //  Copyright © 2016 Brad Siegel. All rights reserved.
 //
 
-import Foundation
-import Firebase
+import UIKit
 
 class LoginController: UIViewController,
                        RequiresSeguePerformer {
-
-    private var firebaseRef = Firebase(url: NetworkFirebase.rootURL)
     
-    private var seguePerformer: SeguePerformer?
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
+    
+    private var seguePerformer: SeguePerformer?
     
     override func viewWillAppear(animated: Bool) {
         self.errorLabel.text = nil
     }
     
     @IBAction func login(sender: AnyObject) {
-        self.firebaseRef?.authUser(
-            self.emailField.text,
-            password: self.passwordField.text,
-            withCompletionBlock: { (error, auth) -> Void in
-                if error == nil {
-                    self.seguePerformer?.navigateWithSegue(
-                        "landingScreen",
-                        dataForSegue: nil)
-                } else {
-                    self.errorLabel.text = error.firebaseDescription()
-                }
-        })
+        NetworkFirebase().login(
+            self.emailField.text!,
+            password: passwordField.text!) { (error) in
+                
+            if error == nil {
+                self.seguePerformer?.navigateWithSegue(
+                    "landingScreen",
+                    dataForSegue: nil)
+            } else {
+                self.errorLabel.text = error?.firebaseDescription()
+            }
+        }
     }
 
     @IBAction func register(sender: AnyObject) {
