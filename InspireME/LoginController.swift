@@ -19,6 +19,10 @@ class LoginController: UIViewController,
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
+    override func viewWillAppear(animated: Bool) {
+        self.errorLabel.text = nil
+    }
+    
     @IBAction func login(sender: AnyObject) {
         self.firebaseRef?.authUser(
             self.emailField.text,
@@ -28,7 +32,6 @@ class LoginController: UIViewController,
                     self.seguePerformer?.navigateWithSegue(
                         "landingScreen",
                         dataForSegue: nil)
-                    
                 } else {
                     self.errorLabel.text = error.firebaseDescription()
                 }

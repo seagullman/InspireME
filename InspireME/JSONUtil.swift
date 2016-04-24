@@ -47,7 +47,14 @@ extension NSDate: JSONEncodable {
     func encodeToJSON() -> AnyObject {
         return dateFormatterShort.stringFromDate(self)
     }
-    
+}
+
+extension NSDate {
+    func currentDateString() -> String{
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        return formatter.stringFromDate(self)
+    }
 }
 //extension Array : JSONObject {
 //    

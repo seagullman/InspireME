@@ -7,15 +7,6 @@
 //
 
 import UIKit
-import Firebase
-
-extension NSDate {
-    func currentDateString() -> String{
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        return formatter.stringFromDate(self)
-    }
-}
 
 class AccountRegistrationController: UIViewController,
                                      RequiresSeguePerformer {
