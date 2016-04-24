@@ -10,15 +10,32 @@ import Foundation
 
 public struct User: JSONEncodable {
     
-    var firstName: String?
-    var lastName: String?
-    var dateJoined: String?
+    var firstName: String
+    var lastName: String
+    var email: String
+    var dateJoined: NSDate?
     //var posts: [Post]
     
     init(sourceDictionary: [String: AnyObject]) {
-        self.firstName = sourceDictionary["firstName"] as? String
-        self.lastName = sourceDictionary["lastName"] as? String
-        self.dateJoined = NSDate().currentDate()
+        self.firstName = sourceDictionary["firstName"] as! String
+        self.lastName = sourceDictionary["lastName"] as! String
+        self.email = sourceDictionary["email"] as! String
+        let dateFormatter = NSDateFormatter() //TODO: - revist this
+        dateFormatter.dateFormat = "MM/DD/yy"
+        let dateString = sourceDictionary["dateJoined"] as! String
+        if let dateJoined = dateFormatter.dateFromString(dateString) {
+            self.dateJoined = dateJoined
+        }
+    }
+    
+    init(firstName: String,
+         lastName: String,
+         email: String,
+         dateJoined: NSDate) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.dateJoined = dateJoined
     }
     
     //MARK: - JSONEncodable
@@ -26,7 +43,8 @@ public struct User: JSONEncodable {
         var nillableDictionary = [String:AnyObject?]()
         nillableDictionary["firstName"] = self.firstName
         nillableDictionary["lastNamed"] = self.lastName
-        nillableDictionary["dateJoined"] = self.dateJoined
+        nillableDictionary["email"] = self.email
+        nillableDictionary["dateJoined"] = self.dateJoined?.encodeToJSON()
         let dictionary: [String:AnyObject] = JSONUtil.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }

@@ -8,25 +8,26 @@
 
 import Foundation
 
-
 extension NSError {
-
+    
      func firebaseDescription() -> String {
-        let emailTaken = "This email address is already registered to an account."
-        let emptyPassword = "Password cannot be blank. Please enter a password."
-        let invalidEmail = "Please enter a valid email address."
-        
-        var error: String
+        var description: String
         switch code {
         case -5:
-            error = emailTaken
+            description = ErrorDescription.InvalidEmail.rawValue
         case -6:
-            error = emptyPassword
+            description = ErrorDescription.EmptyPassword.rawValue
         case -9:
-            error = invalidEmail
+            description = ErrorDescription.EmailTaken.rawValue
         default:
-            error = "Oops, something went wrong."
+            description = "Oops, something went wrong."
         }
-        return error
+        return description
     }
+}
+
+private enum ErrorDescription: String {
+    case EmailTaken = "This email address is already registered to an account."
+    case EmptyPassword = "Password cannot be blank. Please enter a password."
+    case InvalidEmail = "Please enter a valid email address/password."
 }

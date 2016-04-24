@@ -30,43 +30,22 @@ class JSONUtil {
     }
 }
 
-private let dateFormatter = { () -> NSDateFormatter in
+private let dateFormatterShort = { () -> NSDateFormatter in
     let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"
-    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-    dateFormatter.timeZone = NSTimeZone.localTimeZone()
+    dateFormatter.dateFormat = "MM/dd/yyyy"
     return dateFormatter
 }()
 
-private let dateFormatterWithTimezone = { () -> NSDateFormatter in
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZZZZZ"
-    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-    dateFormatter.timeZone = NSTimeZone.localTimeZone()
-    return dateFormatter
-}()
-
-//
-// Date formatter for NSDate
-//
-private let formatters = [dateFormatter, dateFormatterWithTimezone]
-
-extension NSDate {
+extension NSDate: JSONEncodable {
     class func create(json: AnyObject?) -> NSDate? {
         guard let string = json as? String else {
             return nil
         }
-        
-        for formatter in formatters {
-            if let date = formatter.dateFromString(string) {
-                return date
-            }
-        }
-        return nil
+        return dateFormatterShort.dateFromString(string)
     }
     
     func encodeToJSON() -> AnyObject {
-        return dateFormatterWithTimezone.stringFromDate(self)
+        return dateFormatterShort.stringFromDate(self)
     }
     
 }

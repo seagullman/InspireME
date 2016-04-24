@@ -11,9 +11,6 @@ import Firebase
 
 class LandingController: UIViewController {
     
-    private var firebaseRef = Firebase(
-        url: NetworkFirebase.urlForChildPath(ChildPath.Posts))
-    
     override func viewDidLoad() {
         
     }

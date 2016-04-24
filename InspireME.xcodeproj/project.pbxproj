@@ -13,6 +13,7 @@
 		C761E5F81CC70C0600D3BDAC /* AccountRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */; };
 		C761E5FC1CC72B5700D3BDAC /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5FB1CC72B5700D3BDAC /* LandingController.swift */; };
 		C76F6CFD1CCBF957008B412C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F6CFC1CCBF957008B412C /* User.swift */; };
+		C78DF2571CCC8D3F004C50DE /* AccountRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */; };
 		C7919DAD1CC8661C00032593 /* NetworkFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */; };
 		C79278CC1CBF01D300B50FA8 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* PostCell.xib */; };
 		C79278D41CBF053700B50FA8 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D31CBF053700B50FA8 /* PostCollectionViewCell.swift */; };
@@ -36,6 +37,7 @@
 		C761E5FB1CC72B5700D3BDAC /* LandingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		C76F6CFC1CCBF957008B412C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationView.swift; sourceTree = "<group>"; };
 		C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkFirebase.swift; sourceTree = "<group>"; };
 		C79278CB1CBF01D300B50FA8 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		C79278CE1CBF029D00B50FA8 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../Documents/development/GPIMobile/Fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */,
+				C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */,
 			);
 			name = Registration;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				C7919DAD1CC8661C00032593 /* NetworkFirebase.swift in Sources */,
 				C79278D41CBF053700B50FA8 /* PostCollectionViewCell.swift in Sources */,
 				C7E694561CC7BBDF00F7B427 /* ErrorMapper.swift in Sources */,
+				C78DF2571CCC8D3F004C50DE /* AccountRegistrationView.swift in Sources */,
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
 				C761E5F81CC70C0600D3BDAC /* AccountRegistrationController.swift in Sources */,
 				C761E5FC1CC72B5700D3BDAC /* LandingController.swift in Sources */,

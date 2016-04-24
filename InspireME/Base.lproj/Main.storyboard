@@ -15,6 +15,9 @@
             <string>Lato-Light</string>
             <string>Lato-Light</string>
             <string>Lato-Light</string>
+            <string>Lato-Light</string>
+            <string>Lato-Light</string>
+            <string>Lato-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -56,10 +59,10 @@
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-uM-Lbv">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-uM-Lbv">
                                 <rect key="frame" x="210" y="260" width="180" height="33"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEG-3T-72X">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEG-3T-72X">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="33"/>
                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
                                         <state key="normal" title="Login"/>
@@ -78,7 +81,7 @@
                                     <constraint firstAttribute="width" constant="180" id="dOt-Ln-gQ4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQb-Ew-91U">
                                 <rect key="frame" x="227" y="341" width="146.5" height="18"/>
@@ -95,7 +98,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgy-O1-5GY">
-                                <rect key="frame" x="11" y="159" width="560" height="0.0"/>
+                                <rect key="frame" x="20" y="159" width="560" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
                                 <color key="textColor" red="0.8627451062" green="0.1178684607" blue="0.099945264239999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -120,7 +123,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SdF-uM-Lbv" firstAttribute="trailing" secondItem="a5z-Uj-w3W" secondAttribute="trailing" id="72i-aO-HVh"/>
-                            <constraint firstItem="Pgy-O1-5GY" firstAttribute="leading" secondItem="mBI-mg-Net" secondAttribute="leading" constant="11" id="76G-6B-VDN"/>
+                            <constraint firstItem="Pgy-O1-5GY" firstAttribute="leading" secondItem="mBI-mg-Net" secondAttribute="leading" constant="20" id="76G-6B-VDN"/>
                             <constraint firstItem="4Va-P2-lMT" firstAttribute="centerX" secondItem="mBI-mg-Net" secondAttribute="centerX" id="Du5-KO-khh"/>
                             <constraint firstItem="4Va-P2-lMT" firstAttribute="top" secondItem="3Rd-H1-Jn0" secondAttribute="bottom" constant="120" id="LAR-Nr-4Mk"/>
                             <constraint firstItem="a5z-Uj-w3W" firstAttribute="leading" secondItem="4Va-P2-lMT" secondAttribute="leading" id="f6Q-3o-iJL"/>
@@ -131,8 +134,9 @@
                             <constraint firstItem="a5z-Uj-w3W" firstAttribute="top" secondItem="4Va-P2-lMT" secondAttribute="bottom" constant="8" id="pSo-1V-VjO"/>
                             <constraint firstItem="4Va-P2-lMT" firstAttribute="top" secondItem="Pgy-O1-5GY" secondAttribute="bottom" constant="25" id="q2o-WL-lXq"/>
                             <constraint firstItem="SQb-Ew-91U" firstAttribute="top" secondItem="DEG-3T-72X" secondAttribute="bottom" constant="48" id="wCm-4B-yPc"/>
+                            <constraint firstItem="Pgy-O1-5GY" firstAttribute="centerX" secondItem="mBI-mg-Net" secondAttribute="centerX" id="wFU-rF-Ggy"/>
                             <constraint firstItem="SdF-uM-Lbv" firstAttribute="leading" secondItem="a5z-Uj-w3W" secondAttribute="leading" id="xVu-Ac-pch"/>
-                            <constraint firstAttribute="trailing" secondItem="Pgy-O1-5GY" secondAttribute="trailing" constant="29" id="yGz-dM-Cx1"/>
+                            <constraint firstAttribute="trailing" secondItem="Pgy-O1-5GY" secondAttribute="trailing" constant="20" id="yGz-dM-Cx1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYx-KA-iGf"/>
@@ -154,7 +158,7 @@
                         <viewControllerLayoutGuide type="top" id="fb0-vX-CVS"/>
                         <viewControllerLayoutGuide type="bottom" id="Sqx-fO-c3X"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cYd-SJ-J2t">
+                    <view key="view" contentMode="scaleToFill" id="cYd-SJ-J2t" customClass="AccountRegistrationView" customModule="InspireME" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -164,7 +168,23 @@
                                     <constraint firstAttribute="width" constant="180" id="8VU-Ri-RUy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWS-ij-Hwi">
+                                <rect key="frame" x="210" y="144" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="7Ms-JQ-JMT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUH-gk-JtG">
+                                <rect key="frame" x="210" y="100" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="G10-Qu-7gR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-d1-cAW">
                                 <rect key="frame" x="210" y="222" width="180" height="30"/>
@@ -174,39 +194,67 @@
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSt-ac-QDB">
+                                <rect key="frame" x="210" y="260" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="eSc-5P-adE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egc-Rg-WOW">
-                                <rect key="frame" x="210" y="260" width="180" height="33"/>
+                                <rect key="frame" x="210" y="298" width="180" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="yYo-wb-ZHJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Create Account"/>
                                 <connections>
-                                    <action selector="createAccount:" destination="LlB-Lw-QLl" eventType="touchUpInside" id="wXc-b9-jwL"/>
+                                    <action selector="createAccount:" destination="LlB-Lw-QLl" eventType="touchUpInside" id="2ln-3C-omh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl4-Yo-g8y">
-                                <rect key="frame" x="20" y="159" width="560" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
-                                <color key="textColor" red="0.86274510622024536" green="0.11786846074768062" blue="0.099945264243694126" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4C-CO-foc">
+                                <rect key="frame" x="20" y="346" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                <color key="textColor" red="0.8627451062" green="0.24797208564833209" blue="0.05954720690142068" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Rl4-Yo-g8y" secondAttribute="trailing" constant="20" id="3in-A4-UAb"/>
-                            <constraint firstItem="AB2-FU-UWD" firstAttribute="top" secondItem="Rl4-Yo-g8y" secondAttribute="bottom" constant="25" id="4zf-Hp-atr"/>
+                            <constraint firstItem="MWS-ij-Hwi" firstAttribute="leading" secondItem="NUH-gk-JtG" secondAttribute="leading" id="CO7-ib-Lj1"/>
+                            <constraint firstItem="Egc-Rg-WOW" firstAttribute="top" secondItem="Ysa-d1-cAW" secondAttribute="bottom" constant="8" id="E05-VQ-NYA"/>
+                            <constraint firstItem="T4C-CO-foc" firstAttribute="top" secondItem="Egc-Rg-WOW" secondAttribute="bottom" constant="15" id="GUt-h0-vp8"/>
                             <constraint firstItem="AB2-FU-UWD" firstAttribute="centerX" secondItem="cYd-SJ-J2t" secondAttribute="centerX" id="HJM-KP-oqA"/>
-                            <constraint firstItem="Rl4-Yo-g8y" firstAttribute="leading" secondItem="cYd-SJ-J2t" secondAttribute="leading" constant="20" id="HMC-wQ-iqA"/>
-                            <constraint firstItem="Egc-Rg-WOW" firstAttribute="leading" secondItem="Ysa-d1-cAW" secondAttribute="leading" id="UXG-t9-C5S"/>
-                            <constraint firstItem="Egc-Rg-WOW" firstAttribute="trailing" secondItem="Ysa-d1-cAW" secondAttribute="trailing" id="X7b-rx-wt4"/>
-                            <constraint firstItem="Egc-Rg-WOW" firstAttribute="top" secondItem="Ysa-d1-cAW" secondAttribute="bottom" constant="8" id="XM9-w5-iDO"/>
+                            <constraint firstItem="MWS-ij-Hwi" firstAttribute="top" secondItem="NUH-gk-JtG" secondAttribute="bottom" constant="14" id="K69-Mc-yFg"/>
+                            <constraint firstItem="NUH-gk-JtG" firstAttribute="top" secondItem="fb0-vX-CVS" secondAttribute="bottom" constant="36" id="NUD-5M-Mu9"/>
+                            <constraint firstItem="NUH-gk-JtG" firstAttribute="centerX" secondItem="cYd-SJ-J2t" secondAttribute="centerX" id="O4N-tq-aCb"/>
+                            <constraint firstAttribute="trailing" secondItem="T4C-CO-foc" secondAttribute="trailing" constant="20" id="UrR-8m-tuy"/>
+                            <constraint firstItem="T4C-CO-foc" firstAttribute="centerX" secondItem="Egc-Rg-WOW" secondAttribute="centerX" id="Z7j-Y7-bHM"/>
+                            <constraint firstItem="aSt-ac-QDB" firstAttribute="top" secondItem="Ysa-d1-cAW" secondAttribute="bottom" constant="8" id="ZAt-Q0-W7M"/>
+                            <constraint firstItem="Egc-Rg-WOW" firstAttribute="centerX" secondItem="Ysa-d1-cAW" secondAttribute="centerX" id="eIe-8Y-86J"/>
                             <constraint firstItem="Ysa-d1-cAW" firstAttribute="leading" secondItem="AB2-FU-UWD" secondAttribute="leading" id="hCF-Xa-u4K"/>
+                            <constraint firstItem="Egc-Rg-WOW" firstAttribute="top" secondItem="aSt-ac-QDB" secondAttribute="bottom" constant="8" id="hkw-xN-3Oq"/>
+                            <constraint firstItem="T4C-CO-foc" firstAttribute="leading" secondItem="cYd-SJ-J2t" secondAttribute="leading" constant="20" id="iXW-3p-NUI"/>
                             <constraint firstItem="AB2-FU-UWD" firstAttribute="top" secondItem="fb0-vX-CVS" secondAttribute="bottom" constant="120" id="k4c-HN-SZq"/>
                             <constraint firstItem="Ysa-d1-cAW" firstAttribute="top" secondItem="AB2-FU-UWD" secondAttribute="bottom" constant="8" id="mCq-Vk-Tdf"/>
+                            <constraint firstItem="aSt-ac-QDB" firstAttribute="centerX" secondItem="Ysa-d1-cAW" secondAttribute="centerX" id="o19-Ww-Bh6"/>
+                            <constraint firstItem="AB2-FU-UWD" firstAttribute="top" secondItem="MWS-ij-Hwi" secondAttribute="bottom" constant="10" id="xZe-7v-DUP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="k4c-HN-SZq"/>
+                                <exclude reference="E05-VQ-NYA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="AB2-FU-UWD" id="Ghz-Q4-8M8"/>
-                        <outlet property="errorLabel" destination="Rl4-Yo-g8y" id="pxI-Oe-BCv"/>
-                        <outlet property="passwordField" destination="Ysa-d1-cAW" id="4bc-cE-1RM"/>
+                        <outlet property="confirmPasswordField" destination="aSt-ac-QDB" id="eYU-fs-gVM"/>
+                        <outlet property="emailField" destination="AB2-FU-UWD" id="bHO-c4-jfV"/>
+                        <outlet property="errorLabel" destination="T4C-CO-foc" id="LFB-RM-Lvr"/>
+                        <outlet property="firstNameField" destination="NUH-gk-JtG" id="KvS-AQ-Bsq"/>
+                        <outlet property="lastNameField" destination="MWS-ij-Hwi" id="GD1-et-QYI"/>
+                        <outlet property="passwordField" destination="Ysa-d1-cAW" id="Lhq-W0-Kkx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v52-Mw-86w" userLabel="First Responder" sceneMemberID="firstResponder"/>

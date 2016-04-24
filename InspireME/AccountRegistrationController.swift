@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 extension NSDate {
-    func currentDate() -> String{
+    func currentDateString() -> String{
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         return formatter.stringFromDate(self)
@@ -20,45 +20,40 @@ extension NSDate {
 class AccountRegistrationController: UIViewController,
                                      RequiresSeguePerformer {
     
-    private var seguePerformer: SeguePerformer?
-    private var firebaseRef = Firebase(url: NetworkFirebase.rootURL)
-    
+    @IBOutlet private weak var firstNameField: UITextField!
+    @IBOutlet private weak var lastNameField: UITextField!
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var confirmPasswordField: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     
+    //MARK: - RequiresSeguePerformer
+    private var seguePerformer: SeguePerformer?
+    
     @IBAction func createAccount(sender: AnyObject) {
-        self.firebaseRef?.createUser(
-        emailField.text,
-        password: passwordField.text) { (error: NSError!) in
-            if error == nil {
-                //authenticate user if creation was successful
-                self.firebaseRef?.authUser(
-                    self.emailField.text,
-                    password: self.passwordField.text,
-                    withCompletionBlock: { (error, auth) -> Void in
-                        //TODO: - Handle error != nil here
-                        let user = User(sourceDictionary:[
-                            "id": auth.uid,
-                            "firstName": "\(self.emailField.text!)", //TODO: change this once registration screen is done
-                            "lastName": "Siegel",
-                            "dateJoined": "\(NSDate().currentDate())"]
-                        )
-                        
-                        self.firebaseRef.childByAppendingPath("\(ChildPath.Users.rawValue)/\(auth.uid)").setValue(user.encodeToJSON())
-                        
+            NetworkFirebase().createUser(
+                userModel(),
+                password: emailField.text!) { (error) in
+                    if error == nil {
                         self.seguePerformer?.navigateWithSegue(
                             "landingScreen",
                             dataForSegue: nil)
-                })
-            } else {
-               self.errorLabel.text = error.firebaseDescription()
-            }
+                    } else {
+                        self.errorLabel.text = error?.firebaseDescription()
+                    }
         }
     }
     
     //MARK: - RequiresSeguePerformer
     func setSeguePerformer(performer: SeguePerformer) {
         self.seguePerformer = performer
+    }
+    
+    //MARK: - Private Functions
+    private func userModel() -> User {
+        return User(firstName: self.firstNameField.text!,
+                    lastName: self.lastNameField.text!,
+                    email: self.emailField.text!,
+                    dateJoined: NSDate())
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 enum ChildPath: String {
     case Posts = "/posts"
@@ -16,8 +17,30 @@ enum ChildPath: String {
 class NetworkFirebase {
     
     static let rootURL = "https://brilliant-torch-5066.firebaseio.com"
+    private let firebaseRef = Firebase(url: rootURL)
     
-    class func urlForChildPath(path: ChildPath) -> String {
-        return "\(rootURL)\(path)"
+    func createUser(user: User,
+                    password: String,
+                    completion: (error: NSError?) -> Void) {
+        
+        self.firebaseRef.createUser(
+            user.email,
+            password: password) { (error: NSError!) in
+                if error == nil {
+                    //authenticate user if creation was successful
+                    self.firebaseRef?.authUser(
+                        user.email,
+                        password: password,
+                        withCompletionBlock: { (error, auth) -> Void in
+                            
+                            let childPath = self.firebaseRef.childByAppendingPath("\(ChildPath.Users.rawValue)/\(auth.uid)")
+                            childPath.setValue(user.encodeToJSON())
+                            
+                            completion(error: nil)
+                    })
+                } else {
+                    completion(error: error)
+                }
+        }
     }
 }
