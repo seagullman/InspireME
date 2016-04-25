@@ -17,13 +17,19 @@ class LandingController: UIViewController {
         NetworkFirebase().logout()
         performer?.navigateWithSegue("registration", dataForSegue: nil)
     }
+    @IBAction func createPost(sender: AnyObject) {
+        NetworkFirebase().createPost(
+        Post(quote: "I will forever suhh dude.", author: "Getter", datePosted: NSDate())) { (error) in
+            print("Quote posted!")
+        }
+    }
     
     override func viewDidLoad() {
-        NetworkFirebase().getAllUsers { (users, error) in
-            let usersArray = users
-            for user in usersArray {
-                print("Name: \(user.firstName) \(user.lastName) Date: \(user.dateJoined)")
-            }
-        }
+//        NetworkFirebase().getUsers { (users, error) in
+//            let usersArray = users
+//            for user in usersArray {
+//                print("Name: \(user.firstName) \(user.lastName) Date: \(user.dateJoined)")
+//            }
+//        }
     }
 }

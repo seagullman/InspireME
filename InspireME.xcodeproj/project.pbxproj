@@ -14,6 +14,7 @@
 		C761E5FC1CC72B5700D3BDAC /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5FB1CC72B5700D3BDAC /* LandingController.swift */; };
 		C76F6CFD1CCBF957008B412C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F6CFC1CCBF957008B412C /* User.swift */; };
 		C781535C1CCD62E100AE64B2 /* LandingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781535B1CCD62E100AE64B2 /* LandingScreenViewModel.swift */; };
+		C781535E1CCD8EAF00AE64B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781535D1CCD8EAF00AE64B2 /* ViewModel.swift */; };
 		C78DF2571CCC8D3F004C50DE /* AccountRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */; };
 		C7919DAD1CC8661C00032593 /* NetworkFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */; };
 		C79278CC1CBF01D300B50FA8 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* PostCell.xib */; };
@@ -39,6 +40,7 @@
 		C76F6CFC1CCBF957008B412C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781535B1CCD62E100AE64B2 /* LandingScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenViewModel.swift; sourceTree = "<group>"; };
+		C781535D1CCD8EAF00AE64B2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationView.swift; sourceTree = "<group>"; };
 		C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkFirebase.swift; sourceTree = "<group>"; };
 		C79278CB1CBF01D300B50FA8 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */,
 				C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */,
 				C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */,
+				C781535D1CCD8EAF00AE64B2 /* ViewModel.swift */,
 			);
 			path = InspireME;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				C79278D71CBF061100B50FA8 /* PostViewModel.swift in Sources */,
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
 				C76F6CFD1CCBF957008B412C /* User.swift in Sources */,
+				C781535E1CCD8EAF00AE64B2 /* ViewModel.swift in Sources */,
 				C79278DA1CBF065600B50FA8 /* Post.swift in Sources */,
 				C7C252311CC5127D00C4E248 /* JSONUtil.swift in Sources */,
 				C781535C1CCD62E100AE64B2 /* LandingScreenViewModel.swift in Sources */,

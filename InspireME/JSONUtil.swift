@@ -47,15 +47,32 @@ extension NSDate: JSONEncodable {
     func encodeToJSON() -> AnyObject {
         return dateFormatterShort.stringFromDate(self)
     }
-}
-
-extension NSDate {
+    
     func currentDateString() -> String{
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         return formatter.stringFromDate(self)
     }
 }
+
+extension String {
+    func dateValue() -> NSDate? {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/DD/yy"
+        return dateFormatter.dateFromString(self)
+    }
+}
+
+//extension NSCoder {
+//    func encodeJSONObject(json: JSONObject?, forKey: String) {
+//        self.encodeObject(json?.encodeToJSON(), forKey: forKey)
+//    }
+//    
+//    func decodeJSONObjectForKey<T:JSONObject>(key: String) -> T? {
+//        return T.create(self.decodeObjectForKey(key))
+//    }
+//}
+
 //extension Array : JSONObject {
 //    
 //    static func create(json: AnyObject?) -> Array? {

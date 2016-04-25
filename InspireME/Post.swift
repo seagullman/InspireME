@@ -7,30 +7,36 @@
 //
 
 import Foundation
+import Firebase
 
-public struct  Post: JSONEncodable {
-    var id: String?
+public struct  Post: ServerModel {
     var quote: String? 
     var author: String?
-    var userId: String? //should this be here?
     var datePosted: NSDate?
 
-    init(source: [String: AnyObject]) {
-        self.id = "1"
-        self.quote = source["quote"] as? String
-        self.author = source["author"] as? String
-        self.userId = source["userId"] as? String
-        self.datePosted = NSDate.create(source["datePosted"])
-
+    init(quote: String,
+         author: String,
+         datePosted: NSDate) {
+        self.quote = quote
+        self.author = author
+        self.datePosted = datePosted
     }
     
-    // MARK: - JSONEncodable
+    // MARK: - ServerModel
+    init(snapshot: FDataSnapshot) {
+        self.quote = snapshot.value["quote"] as? String
+        self.author = snapshot.value["author"] as? String
+        let dateString = snapshot.value["datePosted"] as! String
+        if let dateJoined = dateString.dateValue() {
+            self.datePosted = dateJoined
+        }
+    }
+    
     public func encodeToJSON() -> AnyObject {
-        let nillableDictionary = [String:AnyObject?]()
-//        nillableDictionary["id"] = self.id
-//        nillableDictionary["quote"] = self.quote
-//        nillableDictionary["user"] = self.user
-//        nillableDictionary["datePosed"] = self.datePosted?.encodeToJSON()
+        var nillableDictionary = [String:AnyObject?]()
+        nillableDictionary["quote"] = self.quote
+        nillableDictionary["author"] = self.author
+        nillableDictionary["datePosed"] = self.datePosted?.encodeToJSON()
         let dictionary: [String:AnyObject] = JSONUtil.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }

@@ -16,9 +16,11 @@ enum ChildPath: String {
 
 protocol NetworkInterface: class {
     func createUser(user: User, password: String, completion: (error: NSError?) -> Void)
+    func createPost(post: Post, completion: (error: NSError?) -> Void)
     func login(email: String, password: String, completion: (error: NSError?) -> Void)
     func logout()
-    func getAllUsers(completion: (users: [User] , error: NSError?) -> Void)
+    func getUsers(completion: (users: [User] , error: NSError?) -> Void)
+    func getPosts(completion: (posts: [Post], error: NSError?) -> Void)
 }
 
 class NetworkFirebase: NetworkInterface {
@@ -49,6 +51,19 @@ class NetworkFirebase: NetworkInterface {
         }
     }
     
+    func createPost(post: Post, completion: (error: NSError?) -> Void) {
+        let path = firebaseRef.childByAppendingPath(ChildPath.Posts.rawValue).childByAutoId()
+        let uid = firebaseRef.authData.uid
+        let userPath = firebaseRef.childByAppendingPath("\(ChildPath.Users.rawValue)/\(uid)/posts")
+        
+        path.setValue(post.encodeToJSON()) { (error:NSError?, ref:Firebase!) in
+            if error == nil {
+                userPath.updateChildValues(["\(ref.key)":"true"])
+            }
+            completion(error: error)
+        }
+    }
+    
     func login(email: String,
                password: String,
                completion: (error: NSError?) -> Void) {
@@ -61,11 +76,11 @@ class NetworkFirebase: NetworkInterface {
         })
     }
     
-    func getAllUsers(completion: (users: [User] , error: NSError?) -> Void) {
+    func getUsers(completion: (users: [User] , error: NSError?) -> Void) {
         
-        let pathForPosts = self.firebaseRef.childByAppendingPath(ChildPath.Users.rawValue)
+        let path = self.firebaseRef.childByAppendingPath(ChildPath.Users.rawValue)
         
-        pathForPosts.observeSingleEventOfType(.Value, withBlock: { snapshot in
+        path.observeSingleEventOfType(.Value, withBlock: { snapshot in
 
             guard let children = snapshot.children.allObjects as? [FDataSnapshot] else { return }
             
@@ -76,6 +91,10 @@ class NetworkFirebase: NetworkInterface {
             }
             completion(users: allUsers, error: nil)
         })
+    }
+    
+    func getPosts(completion: (posts: [Post], error: NSError?) -> Void) {
+        //let path = self.firebaseRef.childByAppendingPath(ChildPath.Posts.rawValue)
     }
     
     func logout() {

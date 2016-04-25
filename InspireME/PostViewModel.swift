@@ -32,14 +32,31 @@ class PostViewModel {
         }
     }
     
-    /*User ID referencing user who created the post */
-    var userId: String {
-        get {
-            return post.userId ?? ""
+    init(post: Post) {
+        self.post = post
+    }
+}
+
+class PostsViewModel: NSObject, ViewModel {
+
+    var posts = [PostViewModel]() //TODO: would prefer not to initialize this up here
+    
+    init(posts: [Post]) {
+        super.init()
+        convertToViewModels(posts)
+    }
+    
+    private func convertToViewModels(posts: [Post]) {
+        for post in posts {
+            self.posts.append(PostViewModel(post: post))
         }
     }
     
-    init(post: Post) {
-        self.post = post
+    required init?(coder aDecoder: NSCoder) {
+        
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        
     }
 }
