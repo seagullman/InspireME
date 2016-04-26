@@ -16,3 +16,8 @@ protocol ServerModel: JSONEncodable {
 protocol ViewModel : class, NSCoding {
     
 }
+
+protocol RequiresViewModel: class {
+    func createViewModel(completion: (viewModel: ViewModel?, error: ErrorType?) -> Void)
+    func setViewModel(viewModel: ViewModel)
+}
