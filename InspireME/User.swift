@@ -10,16 +10,19 @@ import Foundation
 import Firebase
 
 public struct User: ServerModel {
+    var username: String?
     var firstName: String?
     var lastName: String?
     var email: String?
     var dateJoined: NSDate?
     var posts: [Post]?
     
-    init(firstName: String,
+    init(username: String,
+         firstName: String,
          lastName: String,
          email: String,
          dateJoined: NSDate) {
+        self.username = username
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
@@ -28,6 +31,7 @@ public struct User: ServerModel {
     
     // MARK: - ServerModel
     init(snapshot: FDataSnapshot) {
+        self.username = snapshot.value["username"] as? String
         self.firstName = snapshot.value["firstName"] as? String
         self.lastName = snapshot.value["lastName"] as? String
         self.email = snapshot.value["email"] as? String
@@ -40,6 +44,7 @@ public struct User: ServerModel {
     
     func encodeToJSON() -> AnyObject {
         var nillableDictionary = [String:AnyObject?]()
+        nillableDictionary["username"] = self.username
         nillableDictionary["firstName"] = self.firstName
         nillableDictionary["lastName"] = self.lastName
         nillableDictionary["email"] = self.email

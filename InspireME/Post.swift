@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 public struct  Post: ServerModel {
-    var quote: String? 
+    var quote: String?
     var author: String?
     var datePosted: NSDate?
 
@@ -26,8 +26,8 @@ public struct  Post: ServerModel {
     init(snapshot: FDataSnapshot) {
         self.quote = snapshot.value["quote"] as? String
         self.author = snapshot.value["author"] as? String
-        let dateString = snapshot.value["datePosted"] as! String
-        if let dateJoined = dateString.dateValue() {
+        let dateString = snapshot.value["datePosted"] as? String
+        if let dateJoined = dateString?.dateValue() {
             self.datePosted = dateJoined
         }
     }
@@ -36,7 +36,7 @@ public struct  Post: ServerModel {
         var nillableDictionary = [String:AnyObject?]()
         nillableDictionary["quote"] = self.quote
         nillableDictionary["author"] = self.author
-        nillableDictionary["datePosed"] = self.datePosted?.encodeToJSON()
+        nillableDictionary["datePosted"] = self.datePosted?.encodeToJSON()
         let dictionary: [String:AnyObject] = JSONUtil.rejectNil(nillableDictionary) ?? [:]
         return dictionary
     }

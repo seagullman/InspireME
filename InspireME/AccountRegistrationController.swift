@@ -41,7 +41,8 @@ class AccountRegistrationController: UIViewController,
     
     //MARK: - Private Functions
     private func userModel() -> User {
-        return User(firstName: self.firstNameField.text!,
+        return User(username: "blsiege",
+                    firstName: self.firstNameField.text!,
                     lastName: self.lastNameField.text!,
                     email: self.emailField.text!,
                     dateJoined: NSDate())

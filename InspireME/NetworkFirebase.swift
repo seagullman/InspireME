@@ -19,8 +19,9 @@ protocol NetworkInterface: class {
     func createPost(post: Post, completion: (error: NSError?) -> Void)
     func login(email: String, password: String, completion: (error: NSError?) -> Void)
     func logout()
-    func getUsers(completion: (users: [User] , error: NSError?) -> Void)
+    //func getUsers(completion: (users: [User] , error: NSError?) -> Void)
     func getPosts(completion: (posts: [Post], error: NSError?) -> Void)
+    func getPostsByUsername(username: String, completion: (posts: [Post], error: NSError?))
 }
 
 class NetworkFirebase: NetworkInterface {
@@ -41,13 +42,18 @@ class NetworkFirebase: NetworkInterface {
                         user.email,
                         password: password,
                         withCompletionBlock: { (error, auth) -> Void in
-                            
-                            let childPath = self.firebaseRef.childByAppendingPath("\(ChildPath.Users.rawValue)/\(auth.uid)")
+                            if let _ = error {
+                                //user created sucessfully, error authing user
+                                completion(error: error)
+                                return
+                            }
+                            let childPath = self.firebaseRef.childByAppendingPath(
+                                "\(ChildPath.Users.rawValue)/\(auth.uid)")
                             childPath.setValue(user.encodeToJSON())
-                            
                     })
-                }
+                } else {
                     completion(error: error)
+                }
         }
     }
     
@@ -58,7 +64,8 @@ class NetworkFirebase: NetworkInterface {
         
         path.setValue(post.encodeToJSON()) { (error:NSError?, ref:Firebase!) in
             if error == nil {
-                userPath.updateChildValues(["\(ref.key)":"true"])
+                //associates post object with the user who  created it
+                userPath.updateChildValues(["\(ref.key)":"true"]) //TODO: - determine if a callback block is necessary here
             }
             completion(error: error)
         }
@@ -76,25 +83,37 @@ class NetworkFirebase: NetworkInterface {
         })
     }
     
-    func getUsers(completion: (users: [User] , error: NSError?) -> Void) {
-        
-        let path = self.firebaseRef.childByAppendingPath(ChildPath.Users.rawValue)
-        
-        path.observeSingleEventOfType(.Value, withBlock: { snapshot in
-
+//    func getUsers(completion: (users: [User] , error: NSError?) -> Void) {
+//        
+//        let path = self.firebaseRef.childByAppendingPath(ChildPath.Users.rawValue)
+//        
+//        path.observeSingleEventOfType(.Value, withBlock: { snapshot in
+//
+//            guard let children = snapshot.children.allObjects as? [FDataSnapshot] else { return }
+//            
+//            var allUsers = [User]()
+//            for child in children {
+//                allUsers.append(User(
+//                    snapshot: child))
+//            }
+//            completion(users: allUsers, error: nil)
+//        })
+//    }
+    
+    func getPosts(completion: (posts: [Post], error: NSError?) -> Void) {
+        let path = self.firebaseRef.childByAppendingPath(ChildPath.Posts.rawValue)
+        path.observeSingleEventOfType(.Value, withBlock: {snapshot in
             guard let children = snapshot.children.allObjects as? [FDataSnapshot] else { return }
-            
-            var allUsers = [User]()
+            var allPosts = [Post]()
             for child in children {
-                allUsers.append(User(
-                    snapshot: child))
+                allPosts.append(Post(snapshot: child)) //TODO: - .map{} ??
             }
-            completion(users: allUsers, error: nil)
+            completion(posts: allPosts, error: nil)
         })
     }
     
-    func getPosts(completion: (posts: [Post], error: NSError?) -> Void) {
-        //let path = self.firebaseRef.childByAppendingPath(ChildPath.Posts.rawValue)
+    func getPostsByUsername(username: String, completion: (posts: [Post], error: NSError?)) {
+        
     }
     
     func logout() {
