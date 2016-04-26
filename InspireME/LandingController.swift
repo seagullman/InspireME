@@ -20,24 +20,23 @@ class LandingController: UIViewController,
         NetworkFirebase().logout()
         performer?.navigateWithSegue("registration", dataForSegue: nil)
     }
+    
     @IBAction func createPost(sender: AnyObject) {
         NetworkFirebase().createPost(
             Post(quote: "I will forever suhh dude.", author: "B-RAD", datePosted: NSDate())) { (error) in
             print("Quote posted!")
         }
     }
+    
     @IBAction func getPosts(sender: AnyObject) {
         
     }
-    
     
     override func viewDidAppear(animated: Bool) {
         let posts = self.viewModel?.posts
         for post in posts! {
             print("\(post.author) \(post.quote)")
         }
-        
-
     }
     override func viewDidLoad() {
         

@@ -1,10 +1,13 @@
 PODS:
   - Firebase (2.5.1)
+  - ReSwift (1.0.0)
 
 DEPENDENCIES:
   - Firebase (>= 2.5.1)
+  - ReSwift
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  ReSwift: 2097946852b045bcc04182b63cdab9ab7fc35812
 
 COCOAPODS: 0.39.0

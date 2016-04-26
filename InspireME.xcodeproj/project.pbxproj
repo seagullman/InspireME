@@ -21,6 +21,7 @@
 		C79278D41CBF053700B50FA8 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D31CBF053700B50FA8 /* PostCollectionViewCell.swift */; };
 		C79278D71CBF061100B50FA8 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D61CBF061100B50FA8 /* PostViewModel.swift */; };
 		C79278DA1CBF065600B50FA8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79278D91CBF065600B50FA8 /* Post.swift */; };
+		C7B096AA1CD02A8800BE9131 /* InspireMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B096A91CD02A8800BE9131 /* InspireMETests.swift */; };
 		C7C252311CC5127D00C4E248 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C252301CC5127D00C4E248 /* JSONUtil.swift */; };
 		C7E694561CC7BBDF00F7B427 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E694551CC7BBDF00F7B427 /* ErrorMapper.swift */; };
 		C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */; };
@@ -28,6 +29,16 @@
 		C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */; };
 		C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EE7DE01CA5AEBA00BCCFDE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7B096AC1CD02A8800BE9131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EE7DCC1CA5AEBA00BCCFDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7EE7DD31CA5AEBA00BCCFDE;
+			remoteInfo = InspireME;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1F562540862FD94CB08CD52B /* Pods-InspireME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.release.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +63,9 @@
 		C79278D31CBF053700B50FA8 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		C79278D61CBF061100B50FA8 /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		C79278D91CBF065600B50FA8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C7B096A71CD02A8800BE9131 /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B096A91CD02A8800BE9131 /* InspireMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireMETests.swift; sourceTree = "<group>"; };
+		C7B096AB1CD02A8800BE9131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7C252301CC5127D00C4E248 /* JSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONUtil.swift; path = InspireME/JSONUtil.swift; sourceTree = "<group>"; };
 		C7E694551CC7BBDF00F7B427 /* ErrorMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
 		C7EE7DD71CA5AEBA00BCCFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,11 +73,16 @@
 		C7EE7DDE1CA5AEBA00BCCFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7EE7DE11CA5AEBA00BCCFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7EE7DE31CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireMETests.swift; sourceTree = "<group>"; };
-		C7EE7DEE1CA5AEBA00BCCFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C7B096A41CD02A8800BE9131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7EE7DD11CA5AEBA00BCCFDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +187,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		C7B096A81CD02A8800BE9131 /* InspireMETests */ = {
+			isa = PBXGroup;
+			children = (
+				C7B096A91CD02A8800BE9131 /* InspireMETests.swift */,
+				C7B096AB1CD02A8800BE9131 /* Info.plist */,
+			);
+			path = InspireMETests;
+			sourceTree = "<group>";
+		};
 		C7C252321CC5166A00C4E248 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,8 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
-				C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */,
 				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
+				C7B096A71CD02A8800BE9131 /* InspireMETests.xctest */,
+				C7B096A81CD02A8800BE9131 /* InspireMETests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,18 +239,27 @@
 			path = InspireME;
 			sourceTree = "<group>";
 		};
-		C7EE7DEB1CA5AEBA00BCCFDE /* InspireMETests */ = {
-			isa = PBXGroup;
-			children = (
-				C7EE7DEC1CA5AEBA00BCCFDE /* InspireMETests.swift */,
-				C7EE7DEE1CA5AEBA00BCCFDE /* Info.plist */,
-			);
-			path = InspireMETests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C7B096A61CD02A8800BE9131 /* InspireMETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7B096AE1CD02A8800BE9131 /* Build configuration list for PBXNativeTarget "InspireMETests" */;
+			buildPhases = (
+				C7B096A31CD02A8800BE9131 /* Sources */,
+				C7B096A41CD02A8800BE9131 /* Frameworks */,
+				C7B096A51CD02A8800BE9131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7B096AD1CD02A8800BE9131 /* PBXTargetDependency */,
+			);
+			name = InspireMETests;
+			productName = InspireMETests;
+			productReference = C7B096A71CD02A8800BE9131 /* InspireMETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C7EE7DD31CA5AEBA00BCCFDE /* InspireME */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7EE7DF11CA5AEBA00BCCFDE /* Build configuration list for PBXNativeTarget "InspireME" */;
@@ -252,6 +290,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Brad Siegel";
 				TargetAttributes = {
+					C7B096A61CD02A8800BE9131 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C7EE7DD31CA5AEBA00BCCFDE;
+					};
 					C7EE7DD31CA5AEBA00BCCFDE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = GREW8M86PK;
@@ -272,11 +314,19 @@
 			projectRoot = "";
 			targets = (
 				C7EE7DD31CA5AEBA00BCCFDE /* InspireME */,
+				C7B096A61CD02A8800BE9131 /* InspireMETests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C7B096A51CD02A8800BE9131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7EE7DD21CA5AEBA00BCCFDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +389,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C7B096A31CD02A8800BE9131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7B096AA1CD02A8800BE9131 /* InspireMETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7EE7DD01CA5AEBA00BCCFDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +421,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C7B096AD1CD02A8800BE9131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7EE7DD31CA5AEBA00BCCFDE /* InspireME */;
+			targetProxy = C7B096AC1CD02A8800BE9131 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C7EE7DDB1CA5AEBA00BCCFDE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -383,6 +449,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C7B096AF1CD02A8800BE9131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InspireMETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireMETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InspireME.app/InspireME";
+			};
+			name = Debug;
+		};
+		C7B096B01CD02A8800BE9131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InspireMETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siegel.inspireME.InspireMETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InspireME.app/InspireME";
+			};
+			name = Release;
+		};
 		C7EE7DEF1CA5AEBA00BCCFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,6 +607,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C7B096AE1CD02A8800BE9131 /* Build configuration list for PBXNativeTarget "InspireMETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B096AF1CD02A8800BE9131 /* Debug */,
+				C7B096B01CD02A8800BE9131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C7EE7DCF1CA5AEBA00BCCFDE /* Build configuration list for PBXProject "InspireME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
