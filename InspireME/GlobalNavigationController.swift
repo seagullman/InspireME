@@ -31,16 +31,16 @@ class GlobalNavigationController: UINavigationController,
         self.delegate = self
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        self.mostRecentController = segue.destinationViewController
-        if let destination = segue.destinationViewController as? RequiresViewModel {
-            if let viewModel = sender as? ViewModel {
-                destination.setViewModel(viewModel)
-            } else {
-                self.createViewModelForDestination(destination)
-            }
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        self.mostRecentController = segue.destinationViewController
+//        if let destination = segue.destinationViewController as? RequiresViewModel {
+//            if let viewModel = sender as? ViewModel {
+//                destination.setViewModel(viewModel)
+//            } else {
+//                self.createViewModelForDestination(destination)
+//            }
+//        }
+//    }
     
     func navigationController(navigationController: UINavigationController,
                               willShowViewController viewController: UIViewController,
@@ -59,14 +59,14 @@ class GlobalNavigationController: UINavigationController,
         })
     }
     
-    private func createViewModelForDestination(destination: RequiresViewModel) {
-        destination.createViewModel { (viewModel, error) in
-//            guard let recent = self.mostRecentController,
-//                let destination = destination where destination === recent else { return }
-            guard let viewModel = viewModel else { return }
-            if error == nil {
-                destination.setViewModel(viewModel)
-            }
-        }
-    }
+//    private func createViewModelForDestination(destination: RequiresViewModel) {
+//        destination.createViewModel { (viewModel, error) in
+////            guard let recent = self.mostRecentController,
+////                let destination = destination where destination === recent else { return }
+//            guard let viewModel = viewModel else { return }
+//            if error == nil {
+//                destination.setViewModel(viewModel)
+//            }
+//        }
+//    }
 }

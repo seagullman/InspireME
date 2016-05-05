@@ -27,8 +27,8 @@ public struct  Post: ServerModel {
         self.quote = snapshot.value["quote"] as? String
         self.author = snapshot.value["author"] as? String
         let dateString = snapshot.value["datePosted"] as? String
-        if let dateJoined = dateString?.dateValue() {
-            self.datePosted = dateJoined
+        if let dateString = dateString {
+            self.datePosted = DateStringFormatter.dateFromString(dateString)
         }
     }
     

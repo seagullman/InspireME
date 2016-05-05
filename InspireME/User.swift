@@ -36,8 +36,8 @@ public struct User: ServerModel {
         self.lastName = snapshot.value["lastName"] as? String
         self.email = snapshot.value["email"] as? String
         let dateString = snapshot.value["dateJoined"] as? String
-        if let dateJoined = dateString?.dateValue() {
-            self.dateJoined = dateJoined
+        if let dateString = dateString {
+            self.dateJoined = DateStringFormatter.dateFromString(dateString)
         }
         //TODO: - set post here
     }

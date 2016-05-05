@@ -2,12 +2,11 @@
 //  InspireMETests.swift
 //  InspireMETests
 //
-//  Created by Brad Siegel on 3/25/16.
+//  Created by Brad Siegel on 4/29/16.
 //  Copyright © 2016 Brad Siegel. All rights reserved.
 //
 
 import XCTest
-@testable import InspireME
 
 class InspireMETests: XCTestCase {
     

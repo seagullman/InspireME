@@ -13,16 +13,17 @@ class PostViewModel {
     private let post: Post
     
     var author: String {
-        get {
-            //TODO: - add format functions to handle nil cases
-            return post.author ?? ""
-        }
+        //TODO: - add format functions to handle nil cases
+        return post.author ?? ""
+    }
+    
+    //TODO: get the user in here
+    var userName: String {
+        return "Brad Siegel"
     }
     
     var datePosted: String {
-        get {
-            return ""
-        }
+        return DateStringFormatter.stringFromDate(post.datePosted)
     }
     
     var quote: String {

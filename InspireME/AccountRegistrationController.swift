@@ -34,6 +34,10 @@ class AccountRegistrationController: UIViewController,
         }
     }
     
+    @IBAction func closeRegistrationModal(sender: AnyObject) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     //MARK: - RequiresSeguePerformer
     func setSeguePerformer(performer: SeguePerformer) {
         self.seguePerformer = performer

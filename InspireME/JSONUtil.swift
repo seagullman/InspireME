@@ -12,6 +12,27 @@ protocol JSONEncodable {
     func encodeToJSON() -> AnyObject
 }
 
+class DateStringFormatter {
+    
+    private static let dateFormatter: NSDateFormatter = {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MM/dd/yy"
+        return formatter
+    }()
+    
+    static func dateFromString(date: String) -> NSDate? {
+        return dateFormatter.dateFromString(date)
+    }
+    
+    static func stringFromDate(date: NSDate?) -> String {
+        if let date = date {
+            return dateFormatter.stringFromDate(date)
+        } else {
+            return ""
+        }
+    }
+}
+
 class JSONUtil {
     
     static func rejectNil(source: [String:AnyObject?]) -> [String:AnyObject]? {
@@ -47,56 +68,4 @@ extension NSDate: JSONEncodable {
     func encodeToJSON() -> AnyObject {
         return dateFormatterShort.stringFromDate(self)
     }
-    
-    func currentDateString() -> String{
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        return formatter.stringFromDate(self)
-    }
 }
-
-extension String {
-    func dateValue() -> NSDate? {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM/DD/yy"
-        return dateFormatter.dateFromString(self)
-    }
-}
-
-//extension NSCoder {
-//    func encodeJSONObject(json: JSONObject?, forKey: String) {
-//        self.encodeObject(json?.encodeToJSON(), forKey: forKey)
-//    }
-//    
-//    func decodeJSONObjectForKey<T:JSONObject>(key: String) -> T? {
-//        return T.create(self.decodeObjectForKey(key))
-//    }
-//}
-
-//extension Array : JSONObject {
-//    
-//    static func create(json: AnyObject?) -> Array? {
-//        guard let json = json else {
-//            return nil
-//        }
-//        return Array(json:json)
-//    }
-//    
-//    init?(json: AnyObject) {
-//        guard let jsonArray = json as? [AnyObject] else {
-//            return nil
-//        }
-//        self.init()
-//        for element in jsonArray {
-//            if let type = self.dynamicType.Element.self as? JSONObject.Type {
-//                if let newObject = type.create(element) {
-//                    self.append(newObject as! Element)
-//                }
-//            } else {
-//                if let newObject = element as? Element {
-//                    self.append(newObject)
-//                }
-//            }
-//        }
-//}
-

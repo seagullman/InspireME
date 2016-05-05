@@ -17,8 +17,11 @@ class LoginController: UIViewController,
     
     private var seguePerformer: SeguePerformer?
     
+    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
+    
     override func viewWillAppear(animated: Bool) {
         self.errorLabel.text = nil
+        self.swipeRecognizer.direction = .Up
     }
     
     @IBAction func login(sender: AnyObject) {

@@ -5,13 +5,10 @@ use_frameworks!
 
 target 'InspireME' do
 pod 'Firebase', '>= 2.5.1'
+pod 'FirebaseUI/Core', '~> 0.3'
 end
 
 target 'InspireMETests' do
-
-end
-
-target 'InspireMEUITests' do
 
 end
 
