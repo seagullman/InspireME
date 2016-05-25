@@ -8,45 +8,59 @@
 
 import UIKit
 
-class LoginController: UIViewController,
-                       RequiresSeguePerformer {
-    
-    @IBOutlet private weak var passwordField: UITextField!
-    @IBOutlet private weak var emailField: UITextField!
-    @IBOutlet private weak var errorLabel: UILabel!
-    
-    private var seguePerformer: SeguePerformer?
-    
-    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
-    
-    override func viewWillAppear(animated: Bool) {
-        self.errorLabel.text = nil
-        self.swipeRecognizer.direction = .Up
-    }
-    
-    @IBAction func login(sender: AnyObject) {
+protocol LoginDelegate: class {
+    func login(username: String, password: String, completion: (error: NSError?) -> Void)
+    func register()
+}
+
+extension LoginController: LoginDelegate {
+
+    func login(username: String, password: String, completion: (error: NSError?) -> Void) {
         NetworkFirebase().login(
-            self.emailField.text!,
-            password: passwordField.text!) { (error) in
+            username,
+            password: password) { (error) in
                 
-            if error == nil {
-                self.seguePerformer?.navigateWithSegue(
-                    "landingScreen",
-                    dataForSegue: nil)
-            } else {
-                self.errorLabel.text = error?.firebaseDescription()
-            }
+                if error == nil {
+                    self.seguePerformer?.navigateWithSegue(
+                        "landingScreen",
+                        dataForSegue: nil)
+                } else {
+                    completion(error: error!)
+                }
         }
     }
-
-    @IBAction func register(sender: AnyObject) {
+    
+    func register() {
         self.seguePerformer?.navigateWithSegue(
             Segue.Register.rawValue,
             dataForSegue: nil)
+    }
+}
+
+class LoginController: UIViewController,
+                       RequiresSeguePerformer {
+    
+
+    @IBOutlet private var loginView: LoginView!
+    private var seguePerformer: SeguePerformer?
+    
+    override func viewDidLoad() {
+        self.loginView.loginDelegate = self
+        populateUsernameAndPasswordFromSettingsBundle()
     }
     
     //MARK: - RequiresSeguePerformer
     func setSeguePerformer(performer: SeguePerformer) {
         self.seguePerformer = performer
+    }
+    
+    //MARK: Private functions
+    private func populateUsernameAndPasswordFromSettingsBundle() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let savedUsername = userDefaults.objectForKey("loginUsername") as? String ?? ""
+        let savedPassword = userDefaults.objectForKey("loginPassword") as? String ?? ""
+        self.loginView?.provideUsernameAndPassword(
+            savedUsername,
+            password: savedPassword)
     }
 }

@@ -10,32 +10,32 @@ import UIKit
 import Firebase
 import FirebaseUI
 
-class LandingView: UIView {
+class LandingView: UIView{
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     var firebaseRef = Firebase(
         url: NetworkFirebase.rootURL).childByAppendingPath(ChildPath.Posts.rawValue)
     
-    var dataSource: FirebaseTableViewDataSource!
+    var dataSource: FirebaseCollectionViewDataSource!
     
     override func awakeFromNib() {
-        self.dataSource = FirebaseTableViewDataSource(
+        self.dataSource = FirebaseCollectionViewDataSource(
             query: firebaseRef,
-            prototypeReuseIdentifier: "postcell",
-            view: self.tableView)
+            modelClass: nil, //TODO: see if I can put Post.self here to have it auto-map
+            nibNamed: "PostCollectionViewCell",
+            cellReuseIdentifier: "postCollectionViewCell",
+            view: self.collectionView)
     }
     
     func displayPosts() {
-        self.dataSource.populateCellWithBlock { (cell, obj) -> Void in
-            
-            guard let cell = cell as? PostCell, snapshot = obj as? FDataSnapshot else { return }
-            
+        self.dataSource.populateCellWithBlock { (cell, obj) in
+            guard let cell = cell as? PostCollectionViewCell, snapshot = obj as? FDataSnapshot else { return }
             let viewModel = PostViewModel(post: Post(
                 snapshot: snapshot))
             cell.displayViewModel(viewModel)
         }
         
-        self.tableView.dataSource = self.dataSource
+        self.collectionView.dataSource = self.dataSource
     }
 }

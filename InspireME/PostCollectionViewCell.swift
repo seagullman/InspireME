@@ -1,5 +1,5 @@
 //
-//  QuoteCollectionViewCell.swift
+//  PostCollectionViewCell.swift
 //  InspireME
 //
 //  Created by Brad Siegel on 4/13/16.
@@ -8,12 +8,19 @@
 
 import UIKit
 
-class QuoteCollectionViewCell: UICollectionViewCell {
+class PostCollectionViewCell: UICollectionViewCell {
+    
+    private let postedByText: String = "Posted by: "
     
     @IBOutlet private weak var quoteTextView: UITextView!
     @IBOutlet private weak var authorLabel: UILabel!
-    @IBOutlet private weak var postInformationLabel: UILabel!
+    @IBOutlet private weak var postedByLabel: UILabel!
+    @IBOutlet private weak var datePostedLabel: UILabel!
     
-    
-    
+    func displayViewModel(viewModel: PostViewModel) {
+        self.quoteTextView.text = viewModel.quote
+        self.authorLabel.text = viewModel.author
+        self.postedByLabel.text = "\(postedByText)\(viewModel.userName)"
+        self.datePostedLabel.text = viewModel.datePosted
+    }
 }

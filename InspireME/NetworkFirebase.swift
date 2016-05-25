@@ -102,7 +102,7 @@ class NetworkFirebase: NetworkInterface {
     
     func getPosts(completion: (posts: [Post], error: NSError?) -> Void) {
         let path = self.firebaseRef.childByAppendingPath(ChildPath.Posts.rawValue)
-        path.observeSingleEventOfType(.Value, withBlock: {snapshot in
+        path.observeSingleEventOfType(.Value, withBlock: { snapshot in
             guard let children = snapshot.children.allObjects as? [FDataSnapshot] else { return }
             var allPosts = [Post]()
             for child in children {

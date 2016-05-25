@@ -19,7 +19,7 @@ class AccountRegistrationController: UIViewController,
     @IBOutlet private weak var errorLabel: UILabel!
     
     private var seguePerformer: SeguePerformer?
-    
+
     @IBAction func createAccount(sender: AnyObject) {
             NetworkFirebase().createUser(
                 userModel(),
@@ -32,10 +32,6 @@ class AccountRegistrationController: UIViewController,
                         self.errorLabel.text = error?.firebaseDescription()
                     }
         }
-    }
-    
-    @IBAction func closeRegistrationModal(sender: AnyObject) {
-            self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //MARK: - RequiresSeguePerformer

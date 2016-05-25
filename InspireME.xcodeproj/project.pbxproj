@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B9D2FBCA9BFB9161D70F8AD6 /* Pods_InspireME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */; };
 		C70B46FC1CDABA6A003526A8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B46FB1CDABA6A003526A8 /* PostCell.swift */; };
+		C71EC0C61CF51573002C4C9F /* CreatePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71EC0C51CF51573002C4C9F /* CreatePostController.swift */; };
+		C71EC0C81CF515AD002C4C9F /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71EC0C71CF515AD002C4C9F /* CreatePostView.swift */; };
+		C71EC0CA1CF5230C002C4C9F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C71EC0C91CF5230C002C4C9F /* Settings.bundle */; };
+		C7206D6A1CE21A5700BCD0D8 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7206D691CE21A5700BCD0D8 /* PostCollectionViewCell.xib */; };
 		C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */; };
 		C761E5F61CC707EC00D3BDAC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5F51CC707EC00D3BDAC /* LoginController.swift */; };
 		C761E5F81CC70C0600D3BDAC /* AccountRegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */; };
@@ -16,6 +20,7 @@
 		C76F6CFD1CCBF957008B412C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F6CFC1CCBF957008B412C /* User.swift */; };
 		C781535E1CCD8EAF00AE64B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781535D1CCD8EAF00AE64B2 /* ViewModel.swift */; };
 		C782DDB11CD6E7C0003D791F /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C782DDB01CD6E7C0003D791F /* LandingView.swift */; };
+		C78D98171CF5258A002D91F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D98161CF5258A002D91F6 /* LoginView.swift */; };
 		C78DF2571CCC8D3F004C50DE /* AccountRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */; };
 		C7919DAD1CC8661C00032593 /* NetworkFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */; };
 		C79278CC1CBF01D300B50FA8 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79278CB1CBF01D300B50FA8 /* PostCell.xib */; };
@@ -45,15 +50,20 @@
 		1FF6F4A095CC9FC3E4929FC8 /* Pods-InspireME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InspireME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InspireME/Pods-InspireME.debug.xcconfig"; sourceTree = "<group>"; };
 		BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InspireME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B46FB1CDABA6A003526A8 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C71EC0C51CF51573002C4C9F /* CreatePostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostController.swift; sourceTree = "<group>"; };
+		C71EC0C71CF515AD002C4C9F /* CreatePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		C71EC0C91CF5230C002C4C9F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		C7206D691CE21A5700BCD0D8 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		C7548B3D1CA6591E00102F5A /* GlobalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationController.swift; sourceTree = "<group>"; };
 		C761E5F51CC707EC00D3BDAC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C761E5F71CC70C0600D3BDAC /* AccountRegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationController.swift; sourceTree = "<group>"; };
 		C761E5FB1CC72B5700D3BDAC /* LandingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		C76F6CFC1CCBF957008B412C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C77333DA1CC2C51900A1A1C8 /* InspireME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireME.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C77CB7E51CDB0B2400BE94DD /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = InspireMETests.xctest; path = "/Users/bradsiegel/Desktop/InspireME/build/Debug-iphoneos/InspireMETests.xctest"; sourceTree = "<absolute>"; };
 		C781535D1CCD8EAF00AE64B2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C782DDB01CD6E7C0003D791F /* LandingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		C78D98151CF52541002D91F6 /* InspireMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspireMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78D98161CF5258A002D91F6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C78DF2561CCC8D3F004C50DE /* AccountRegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationView.swift; sourceTree = "<group>"; };
 		C7919DAC1CC8661C00032593 /* NetworkFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkFirebase.swift; sourceTree = "<group>"; };
 		C79278CB1CBF01D300B50FA8 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
@@ -127,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C761E5F51CC707EC00D3BDAC /* LoginController.swift */,
+				C78D98161CF5258A002D91F6 /* LoginView.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -144,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				C761E5FA1CC72B1D00D3BDAC /* Post Feed */,
+				C71EC0C51CF51573002C4C9F /* CreatePostController.swift */,
+				C71EC0C71CF515AD002C4C9F /* CreatePostView.swift */,
 			);
 			name = Authenticated;
 			sourceTree = "<group>";
@@ -176,6 +189,7 @@
 				C79278CB1CBF01D300B50FA8 /* PostCell.xib */,
 				C79278D31CBF053700B50FA8 /* PostCollectionViewCell.swift */,
 				C79278D61CBF061100B50FA8 /* PostViewModel.swift */,
+				C7206D691CE21A5700BCD0D8 /* PostCollectionViewCell.xib */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -211,9 +225,11 @@
 		C7EE7DCB1CA5AEBA00BCCFDE = {
 			isa = PBXGroup;
 			children = (
+				C71EC0C91CF5230C002C4C9F /* Settings.bundle */,
 				C7EE7DD61CA5AEBA00BCCFDE /* InspireME */,
 				C77333DA1CC2C51900A1A1C8 /* InspireME.app */,
 				C7BEA5481CD3960A005E47C4 /* InspireMETests */,
+				C78D98151CF52541002D91F6 /* InspireMETests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,7 +274,7 @@
 			);
 			name = InspireMETests;
 			productName = InspireMETests;
-			productReference = C77CB7E51CDB0B2400BE94DD /* InspireMETests.xctest */;
+			productReference = C78D98151CF52541002D91F6 /* InspireMETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C7EE7DD31CA5AEBA00BCCFDE /* InspireME */ = {
@@ -336,6 +352,8 @@
 				C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */,
 				C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */,
 				C7EE7DDD1CA5AEBA00BCCFDE /* Main.storyboard in Resources */,
+				C71EC0CA1CF5230C002C4C9F /* Settings.bundle in Resources */,
+				C7206D6A1CE21A5700BCD0D8 /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +425,7 @@
 				C7E694561CC7BBDF00F7B427 /* ErrorMapper.swift in Sources */,
 				C78DF2571CCC8D3F004C50DE /* AccountRegistrationView.swift in Sources */,
 				C782DDB11CD6E7C0003D791F /* LandingView.swift in Sources */,
+				C71EC0C61CF51573002C4C9F /* CreatePostController.swift in Sources */,
 				C7548B3E1CA6591E00102F5A /* GlobalNavigationController.swift in Sources */,
 				C761E5F81CC70C0600D3BDAC /* AccountRegistrationController.swift in Sources */,
 				C761E5FC1CC72B5700D3BDAC /* LandingController.swift in Sources */,
@@ -414,7 +433,9 @@
 				C7EE7DD81CA5AEBA00BCCFDE /* AppDelegate.swift in Sources */,
 				C76F6CFD1CCBF957008B412C /* User.swift in Sources */,
 				C781535E1CCD8EAF00AE64B2 /* ViewModel.swift in Sources */,
+				C71EC0C81CF515AD002C4C9F /* CreatePostView.swift in Sources */,
 				C79278DA1CBF065600B50FA8 /* Post.swift in Sources */,
+				C78D98171CF5258A002D91F6 /* LoginView.swift in Sources */,
 				C7C252311CC5127D00C4E248 /* JSONUtil.swift in Sources */,
 				C761E5F61CC707EC00D3BDAC /* LoginController.swift in Sources */,
 			);

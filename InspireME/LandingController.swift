@@ -17,18 +17,12 @@ class LandingController: UIViewController,
     private var performer: SeguePerformer?
     let firebaseRef = Firebase(url: NetworkFirebase.rootURL)
     var viewModel: PostsViewModel?
-    
-//    @IBAction func logout(sender: AnyObject) {
-//        NetworkFirebase().logout()
-//        performer?.navigateWithSegue("registration", dataForSegue: nil)
-//    }
-//    
-//    @IBAction func createPost(sender: AnyObject) {
-//        NetworkFirebase().createPost(
-//            Post(quote: "I will forever suhh dude.", author: "B-RAD", datePosted: NSDate())) { (error) in
-//            print("Quote posted!")
-//        }
-//    }
+
+    @IBAction func createPost(sender: AnyObject) {
+        self.performer?.navigateWithSegue(
+            Segue.CreatePost.rawValue,
+            dataForSegue: nil)
+    }
 
     override func viewWillAppear(animated: Bool) {
         self.landingView.displayPosts()
