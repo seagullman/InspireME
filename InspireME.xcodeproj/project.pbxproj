@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B9D2FBCA9BFB9161D70F8AD6 /* Pods_InspireME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB64A30B139C5280D7700B55 /* Pods_InspireME.framework */; };
 		C70B46FC1CDABA6A003526A8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B46FB1CDABA6A003526A8 /* PostCell.swift */; };
+		C71D07611D839B3100A626FB /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C79278CE1CBF029D00B50FA8 /* Lato-Light.ttf */; };
+		C71D07621D839B3100A626FB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C79278CF1CBF029D00B50FA8 /* OpenSans-Bold.ttf */; };
+		C71D07631D839B3100A626FB /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C79278D01CBF029D00B50FA8 /* OpenSans-BoldItalic.ttf */; };
+		C71D07641D839B3100A626FB /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C79278D11CBF029D00B50FA8 /* OpenSans-Italic.ttf */; };
+		C71D07651D839B3100A626FB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C79278D21CBF029D00B50FA8 /* OpenSans-Regular.ttf */; };
 		C71EC0C61CF51573002C4C9F /* CreatePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71EC0C51CF51573002C4C9F /* CreatePostController.swift */; };
 		C71EC0C81CF515AD002C4C9F /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71EC0C71CF515AD002C4C9F /* CreatePostView.swift */; };
 		C71EC0CA1CF5230C002C4C9F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C71EC0C91CF5230C002C4C9F /* Settings.bundle */; };
@@ -348,6 +353,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C71D07611D839B3100A626FB /* Lato-Light.ttf in Resources */,
+				C71D07621D839B3100A626FB /* OpenSans-Bold.ttf in Resources */,
+				C71D07631D839B3100A626FB /* OpenSans-BoldItalic.ttf in Resources */,
+				C71D07641D839B3100A626FB /* OpenSans-Italic.ttf in Resources */,
+				C71D07651D839B3100A626FB /* OpenSans-Regular.ttf in Resources */,
 				C79278CC1CBF01D300B50FA8 /* PostCell.xib in Resources */,
 				C7EE7DE21CA5AEBA00BCCFDE /* LaunchScreen.storyboard in Resources */,
 				C7EE7DDF1CA5AEBA00BCCFDE /* Assets.xcassets in Resources */,
